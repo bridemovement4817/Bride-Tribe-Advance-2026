@@ -217,7 +217,7 @@ export default function Home() {
                 transition={{ delay: 0.7, duration: 0.8 }}
                 className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-300 leading-relaxed break-words"
               >
-                A transformative 3-day experience of{" "}
+                A transformative 4-day experience of{" "}
                 <span className="text-[#00AEA9] font-semibold">identity</span>,{" "}
                 <span className="text-[#00AEA9] font-semibold">healing</span>,
                 and{" "}
@@ -271,15 +271,12 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-lg h-auto shadow-2xl shadow-[#00AEA9]/30 rounded-xl font-bold text-white border-0 overflow-hidden group transition-all duration-300 w-full sm:w-auto"
-                  onClick={() => {
-                    const pricingSection = document.getElementById("pricing");
-                    if (pricingSection) {
-                      pricingSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                      "_blank"
+                    )
+                  }
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     Secure Your Spot Now
@@ -299,7 +296,7 @@ export default function Home() {
                 {[
                   { number: "4", label: "Days", icon: Calendar },
                   { number: "4+", label: "Speakers", icon: Users },
-                  { number: "550+", label: "Attendees", icon: Users },
+                  { number: "800+", label: "Attendees", icon: Users },
                 ].map((stat, index) => {
                   const Icon = stat.icon;
                   return (
@@ -591,15 +588,12 @@ export default function Home() {
                   </p>
                 </div>
                 <Button
-                  onClick={() => {
-                    const pricingSection = document.getElementById("pricing");
-                    if (pricingSection) {
-                      pricingSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                      "_blank"
+                    )
+                  }
                   className="relative bg-white text-[#00AEA9] hover:bg-zinc-50 px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
                 >
                   Reserve Your Spot
@@ -737,15 +731,12 @@ export default function Home() {
                   </div>
                 </div>
                 <Button
-                  onClick={() => {
-                    const pricingSection = document.getElementById("pricing");
-                    if (pricingSection) {
-                      pricingSection.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                      "_blank"
+                    )
+                  }
                   className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
                 >
                   Register Today
@@ -833,6 +824,12 @@ export default function Home() {
           <motion.div {...fadeInUp} className="text-center">
             <Button
               size="lg"
+              onClick={() =>
+                window.open(
+                  "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                  "_blank"
+                )
+              }
               className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-7 text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
             >
               <span className="relative z-10 flex items-center">
@@ -851,7 +848,7 @@ export default function Home() {
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
-                Your Guides
+                Your Hosts
               </Badge>
             </motion.div>
             <motion.h2
@@ -871,41 +868,51 @@ export default function Home() {
             </motion.p>
           </motion.div>
 
-          <div className="max-w-6xl mx-auto space-y-8">
-            {/* Main Host */}
-            <motion.div {...fadeInUp}>
-              <Card className="border-none shadow-2xl overflow-hidden rounded-3xl">
+          <motion.div
+            {...staggerChildren}
+            className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          >
+            {/* Main Host - Dan Duval */}
+            <motion.div
+              {...fadeInUp}
+              className="lg:col-span-2"
+              whileHover={{ scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full">
                 <div className="grid md:grid-cols-5 gap-0">
                   <div className="md:col-span-2">
                     <ImageWithFallback
                       src="/1Z0A5430-1.jpg"
-                      alt="Lead Instructor"
+                      alt="Dan Duval"
                       className="w-full h-full min-h-[400px] object-cover"
                     />
                   </div>
-                  <CardContent className="md:col-span-3 p-12">
+                  <CardContent className="md:col-span-3 p-8 md:p-12">
                     <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
                       Lead Instructor
                     </Badge>
-                    <h3 className="text-4xl font-bold mb-4">Dan Duval</h3>
-                    <p className="text-xl text-zinc-600 mb-8 leading-relaxed">
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                      Dan Duval
+                    </h3>
+                    <p className="text-lg md:text-xl text-zinc-600 mb-6 leading-relaxed">
                       With decades of ministry experience, Dan Duval carries a
                       powerful anointing for deliverance, inner healing, and
                       spiritual warfare. His teaching brings clarity,
                       breakthrough, and activation to thousands seeking deeper
                       intimacy with God.
                     </p>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-4 text-lg text-zinc-700">
-                        <CheckCircle2 className="h-6 w-6 text-[#00AEA9]" />
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
+                        <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
                         <span>Founder of Bride Tribe</span>
                       </div>
-                      <div className="flex items-center gap-4 text-lg text-zinc-700">
-                        <CheckCircle2 className="h-6 w-6 text-[#00AEA9]" />
+                      <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
+                        <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
                         <span>Author & Bible teacher</span>
                       </div>
-                      <div className="flex items-center gap-4 text-lg text-zinc-700">
-                        <CheckCircle2 className="h-6 w-6 text-[#00AEA9]" />
+                      <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
+                        <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
                         <span>Specialist in deliverance ministry</span>
                       </div>
                     </div>
@@ -914,73 +921,224 @@ export default function Home() {
               </Card>
             </motion.div>
 
-            {/* Additional Hosts */}
-            <div className="grid md:grid-cols-2 gap-8">
-              <motion.div {...fadeInUp}>
-                <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full">
-                  <div className="relative h-80 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-zinc-500">
-                      Demo Image
-                    </span>
-                  </div>
-                  <CardContent className="p-8">
-                    <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
-                      Co-Host
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-3">Christian Duval</h3>
-                    <p className="text-lg text-zinc-600 mb-6">
-                      Christian brings a prophetic edge to ministry, helping
-                      believers unlock their spiritual gifts and walk in their
-                      divine calling. His passion for inner healing has
-                      transformed countless lives.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-zinc-700">
-                        <div className="w-2 h-2 bg-[#00AEA9] rounded-full"></div>
-                        <span>Prophetic minister</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-zinc-700">
-                        <div className="w-2 h-2 bg-[#00AEA9] rounded-full"></div>
-                        <span>Inner healing specialist</span>
-                      </div>
+            {/* Katie Souza */}
+            <motion.div
+              {...fadeInUp}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="relative"
+            >
+              <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50">
+                <div className="relative h-64 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/10 flex items-center justify-center overflow-hidden">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                    className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/30 to-[#00C4B8]/20"
+                  />
+                  <span className="relative z-10 text-2xl font-bold text-zinc-500">
+                    Demo Image
+                  </span>
+                </div>
+                <CardContent className="p-6">
+                  <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
+                    Featured Speaker
+                  </Badge>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    Katie Souza
+                  </h3>
+                  <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
+                    Katie Souza is a powerful voice in healing and breakthrough
+                    ministry, known for her anointing in physical and emotional
+                    healing.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Healing ministry</span>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Breakthrough activation</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
 
-              <motion.div {...fadeInUp}>
-                <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full">
-                  <div className="relative h-80 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-zinc-500">
-                      Demo Image
-                    </span>
-                  </div>
-                  <CardContent className="p-8">
-                    <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
-                      Ministry Leader
-                    </Badge>
-                    <h3 className="text-2xl font-bold mb-3">Demo Speaker</h3>
-                    <p className="text-lg text-zinc-600 mb-6">
-                      With a strong foundation in spiritual warfare and
-                      deliverance, this speaker equips believers to stand
-                      victorious in their faith. Teaching is practical,
-                      biblical, and life-changing.
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-zinc-700">
-                        <div className="w-2 h-2 bg-[#00AEA9] rounded-full"></div>
-                        <span>Spiritual warfare expert</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-zinc-700">
-                        <div className="w-2 h-2 bg-[#00AEA9] rounded-full"></div>
-                        <span>Deliverance practitioner</span>
-                      </div>
+            {/* David Herzog */}
+            <motion.div
+              {...fadeInUp}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="relative"
+            >
+              <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50">
+                <div className="relative h-64 bg-gradient-to-br from-[#00C4B8]/20 to-[#00AEA9]/10 flex items-center justify-center overflow-hidden">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.5,
+                    }}
+                    className="absolute inset-0 bg-gradient-to-br from-[#00C4B8]/30 to-[#00AEA9]/20"
+                  />
+                  <span className="relative z-10 text-2xl font-bold text-zinc-500">
+                    Demo Image
+                  </span>
+                </div>
+                <CardContent className="p-6">
+                  <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
+                    Featured Speaker
+                  </Badge>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    David Herzog
+                  </h3>
+                  <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
+                    David Herzog brings powerful prophetic ministry and global
+                    revival insights to equip believers for their calling.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Prophetic ministry</span>
                     </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Global revival</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Christian Duval */}
+            <motion.div
+              {...fadeInUp}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="relative"
+            >
+              <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50">
+                <div className="relative h-64 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center overflow-hidden">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.7,
+                    }}
+                    className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/20"
+                  />
+                  <span className="relative z-10 text-2xl font-bold text-zinc-500">
+                    Demo Image
+                  </span>
+                </div>
+                <CardContent className="p-6">
+                  <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
+                    Co-Host
+                  </Badge>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    Christian Duval
+                  </h3>
+                  <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
+                    Christian brings a prophetic edge to ministry, helping
+                    believers unlock their spiritual gifts and walk in their
+                    divine calling.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Prophetic minister</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Inner healing specialist</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Additional Speakers - Placeholder for future */}
+            <motion.div
+              {...fadeInUp}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              whileHover={{ scale: 1.03, y: -5 }}
+              className="relative"
+            >
+              <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50">
+                <div className="relative h-64 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center overflow-hidden">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1.1, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 0.9,
+                    }}
+                    className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/20"
+                  />
+                  <span className="relative z-10 text-2xl font-bold text-zinc-500">
+                    Demo Image
+                  </span>
+                </div>
+                <CardContent className="p-6">
+                  <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
+                    Ministry Leader
+                  </Badge>
+                  <h3 className="text-xl md:text-2xl font-bold mb-3">
+                    Demo Speaker
+                  </h3>
+                  <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
+                    With a strong foundation in spiritual warfare and
+                    deliverance, this speaker equips believers to stand
+                    victorious in their faith.
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Spiritual warfare expert</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                      <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                      <span>Deliverance practitioner</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
@@ -1109,7 +1267,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Complete 3-Day Journey Section - Funnel Step 6 */}
+      {/* Complete 4-Day Journey Section - Funnel Step 6 */}
       <section className="py-32 bg-white snap-start">
         <div className="container mx-auto px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
@@ -1118,7 +1276,7 @@ export default function Home() {
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="bg-gradient-to-r from-zinc-900 to-zinc-700 bg-clip-text text-transparent">
-                3-Day Breakthrough Pathway
+                4-Day Breakthrough Pathway
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-zinc-600 max-w-3xl mx-auto">
@@ -1145,6 +1303,13 @@ export default function Home() {
                 description:
                   "Step into your calling with prophetic activation and commissioning. Leave empowered and equipped for your journey ahead with new authority and understanding.",
                 time: "9:00 AM - 4:00 PM",
+              },
+              {
+                day: "Day 4",
+                title: "Final Activation + Commissioning",
+                description:
+                  "Complete your transformation journey with final activation sessions and commissioning. Leave fully equipped and empowered for your calling.",
+                time: "9:00 AM - 12:30 PM",
               },
             ].map((item, index) => (
               <motion.div key={index} {...fadeInUp}>
@@ -1181,6 +1346,12 @@ export default function Home() {
           <motion.div {...fadeInUp} className="text-center mt-16">
             <Button
               size="lg"
+              onClick={() =>
+                window.open(
+                  "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                  "_blank"
+                )
+              }
               className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-7 text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
             >
               <span className="relative z-10 flex items-center">
@@ -1463,7 +1634,7 @@ export default function Home() {
                     </motion.div>
 
                     <p className="text-xl text-zinc-600 mb-6 font-semibold">
-                      Full 3-Day Experience
+                      Full 4-Day Experience
                     </p>
 
                     <motion.div
@@ -1514,6 +1685,12 @@ export default function Home() {
                   >
                     <Button
                       size="lg"
+                      onClick={() =>
+                        window.open(
+                          "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                          "_blank"
+                        )
+                      }
                       className="relative w-full bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] h-16 text-xl rounded-full mb-4 shadow-xl shadow-[#00AEA9]/25 font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
                     >
                       <span className="relative z-10 flex items-center justify-center">
@@ -1594,9 +1771,9 @@ export default function Home() {
                     "Bring your Bible, a notebook for taking notes, and an open heart ready to receive. Dress comfortably as we'll have extended sessions. We also recommend bringing water and any personal items you need for comfort during ministry times. A detailed preparation guide will be sent after registration.",
                 },
                 {
-                  question: "What if I can't attend all three days?",
+                  question: "What if I can't attend all four days?",
                   answer:
-                    "We strongly encourage attending all three days as each session builds upon the previous one for maximum breakthrough. However, we understand life happens. Recorded sessions will be available to registrants, so you won't miss any teaching if you need to step away. Contact us if you have specific schedule concerns.",
+                    "We strongly encourage attending all four days as each session builds upon the previous one for maximum breakthrough. However, we understand life happens. Recorded sessions will be available to registrants, so you won't miss any teaching if you need to step away. Contact us if you have specific schedule concerns.",
                 },
               ].map((item, index) => (
                 <AccordionItem
@@ -1631,12 +1808,18 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-600 mb-12 max-w-3xl mx-auto"
             >
-              Don't let this opportunity pass you by. Join us for three days
-              that could change the trajectory of your spiritual life forever.
+              Don't let this opportunity pass you by. Join us for four days that
+              could change the trajectory of your spiritual life forever.
             </motion.p>
             <motion.div {...scaleIn}>
               <Button
                 size="lg"
+                onClick={() =>
+                  window.open(
+                    "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                    "_blank"
+                  )
+                }
                 className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-8 text-2xl h-auto shadow-2xl shadow-[#00AEA9]/30 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center">
@@ -1779,7 +1962,7 @@ export default function Home() {
                 color: "from-amber-500 to-amber-600",
               },
               {
-                number: "550+",
+                number: "800+",
                 label: "Attendees",
                 color: "from-amber-500 to-amber-600",
               },

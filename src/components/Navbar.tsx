@@ -163,7 +163,7 @@ export function Navbar() {
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection("pricing")}
+              onClick={() => window.open("https://bridechurch.churchcenter.com/registrations/events/3225360", "_blank")}
               className="ml-4 bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] text-white border-0 rounded-full px-6"
             >
               Register Now
@@ -214,7 +214,7 @@ export function Navbar() {
               ))}
               <Button
                 onClick={() => {
-                  scrollToSection("pricing");
+                  window.open("https://bridechurch.churchcenter.com/registrations/events/3225360", "_blank");
                   setIsMobileMenuOpen(false);
                 }}
                 className="w-full mt-4 bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] text-white border-0 rounded-full"
