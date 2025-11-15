@@ -475,8 +475,8 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-600 max-w-3xl mx-auto mb-8"
             >
-              The Bride Tribe Advance isn't just another event—it's a divine
-              appointment for your breakthrough.
+              The Bride Tribe Advance isn&apos;t just another event—it&apos;s a
+              divine appointment for your breakthrough.
             </motion.p>
           </motion.div>
 
@@ -615,7 +615,7 @@ export default function Home() {
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
-                What's Included
+                What&apos;s Included
               </Badge>
             </motion.div>
             <motion.h2
@@ -780,7 +780,7 @@ export default function Home() {
                     Powerful Worship
                   </Badge>
                   <h3 className="text-3xl font-bold text-white mb-2">
-                    Experience God's Presence
+                    Experience God&apos;s Presence
                   </h3>
                   <p className="text-xl text-zinc-200">
                     Join us in transformative worship that ushers in
@@ -833,7 +833,7 @@ export default function Home() {
               className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-7 text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
             >
               <span className="relative z-10 flex items-center">
-                I'm Ready to Transform
+                I&apos;m Ready to Transform
                 <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
@@ -1497,7 +1497,7 @@ export default function Home() {
                 has more than doubled, and momentum continues to build.
                 <span className="font-semibold text-[#00AEA9]">
                   {" "}
-                  If you're hungry for more of God, longing for authentic
+                  If you&apos;re hungry for more of God, longing for authentic
                   community, and ready to step into your next level—this is your
                   invitation.
                 </span>
@@ -1535,7 +1535,7 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-300 max-w-2xl mx-auto"
             >
-              Limited spaces available. Don't miss this opportunity for
+              Limited spaces available. Don&apos;t miss this opportunity for
               transformation.
             </motion.p>
           </motion.div>
@@ -1808,8 +1808,8 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-600 mb-12 max-w-3xl mx-auto"
             >
-              Don't let this opportunity pass you by. Join us for four days that
-              could change the trajectory of your spiritual life forever.
+              Don&apos;t let this opportunity pass you by. Join us for four days
+              that could change the trajectory of your spiritual life forever.
             </motion.p>
             <motion.div {...scaleIn}>
               <Button
