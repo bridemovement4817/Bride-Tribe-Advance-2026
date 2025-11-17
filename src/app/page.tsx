@@ -37,6 +37,7 @@ import {
   Clock,
   DollarSign,
   Mail,
+  Phone,
   ArrowDown,
   ArrowUp,
   Zap,
@@ -908,7 +909,7 @@ export default function Home() {
                 <ImageWithFallback
                   src="/exp_4.jpg"
                   alt="Worship Moment"
-                  className="w-full h-full min-h-[500px] object-cover"
+                  className="w-full h-full min-h-[500px] object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-800/60 to-zinc-900/70"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-10">
@@ -931,7 +932,7 @@ export default function Home() {
                 <ImageWithFallback
                   src="/exp_2.jpg"
                   alt="Prayer Ministry"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-800/60 to-zinc-900/70"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -945,7 +946,7 @@ export default function Home() {
                 <ImageWithFallback
                   src="/exp_3.jpg"
                   alt="Community"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-800/60 to-zinc-900/70"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -959,7 +960,7 @@ export default function Home() {
                 <ImageWithFallback
                   src="/exp_1.jpg"
                   alt="Transformation"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-800/60 to-zinc-900/70"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
@@ -1004,7 +1005,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <Badge className="bg-[#00AEA9] text-white border-none px-6 py-2 mb-6 rounded-full">
-              Your Complete Journey
+              Your Advance Roadmap
             </Badge>
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white to-[#00AEA9] bg-clip-text text-transparent">
@@ -1034,8 +1035,7 @@ export default function Home() {
                     dayNumber: 1,
                     date: "",
                     title: "Day One",
-                    description:
-                      "Details coming soon. Join us for a powerful start to your transformation journey.",
+                    description: "Details coming soon.",
                     time: "Thursday the 19th",
                     image: "/hero_section_small_backdrop.jpg",
                     badge: "Coming Soon",
@@ -1172,7 +1172,7 @@ export default function Home() {
 
           <motion.div
             {...staggerChildren}
-            className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+            className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             {/* Row 1: Dan Duval - Horizontal (spans 2 cols) */}
             <Drawer
@@ -1181,30 +1181,34 @@ export default function Home() {
             >
               <motion.div
                 {...fadeInUp}
-                className="md:col-span-2 lg:col-span-2"
+                className="order-1 md:order-none md:col-span-2 lg:col-span-2"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
                     <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
-                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0 relative">
                         <ImageWithFallback
                           src="/danduval.webp"
                           alt="Dan Duval"
                           className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/40 via-[#00C4B8]/30 to-[#00AEA9]/40"></div>
                       </div>
                       <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
                           Dan Duval
                         </h3>
                         <p className="text-lg md:text-xl text-zinc-600 mb-6 leading-relaxed">
-                          With decades of ministry experience, Dan Duval carries
-                          a powerful anointing for deliverance, inner healing,
-                          and spiritual warfare. His teaching brings clarity,
-                          breakthrough, and activation to thousands seeking
-                          deeper intimacy with God.
+                          Daniel Duval is the Executive Director of BRIDE
+                          Ministries and is also the Senior Pastor of the BRIDE
+                          Ministries Church. He is the author of nine books,
+                          including two #1 Amazon bestsellers in Prayer. He is
+                          the host of the Discovering Truth with Dan Duval
+                          podcast, the creator of the BRIDE Ministries
+                          Institute, and the creator of the BRIDE Ministries
+                          School of Inner Healing and Deliverance.
                         </p>
                         <div className="space-y-3">
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
@@ -1238,26 +1242,24 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
-                            Lead Instructor
-                          </Badge>
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             Dan Duval
                           </DrawerTitle>
                           <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                            With decades of ministry experience, Dan Duval
-                            carries a powerful anointing for deliverance, inner
-                            healing, and spiritual warfare. His teaching brings
-                            clarity, breakthrough, and activation to thousands
-                            seeking deeper intimacy with God. As the founder of
-                            Bride Tribe, Dan has dedicated his life to equipping
-                            the Body of Christ with biblical truth and practical
-                            tools for spiritual warfare. His ministry has
-                            transformed countless lives through deliverance,
-                            inner healing, and the activation of believers into
-                            their God-given purpose. Through his books,
-                            teachings, and personal ministry, Dan continues to
-                            be a voice of truth and freedom in the Church today.
+                            Daniel Duval is the Executive Director of BRIDE
+                            Ministries and is also the Senior Pastor of the
+                            BRIDE Ministries Church. He is the author of nine
+                            books, including two #1 Amazon bestsellers in
+                            Prayer. He is the host of the Discovering Truth with
+                            Dan Duval podcast, the creator of the BRIDE
+                            Ministries Institute, and the creator of the BRIDE
+                            Ministries School of Inner Healing and Deliverance.
+                            As an advocate for survivors of extreme trauma, it
+                            is his vision to build a world-class platform that
+                            caters to survivors of satanic ritual abuse and
+                            government sponsored mind control agendas, which
+                            includes free resources, a church, support groups,
+                            trained coaches, housing solutions, and more.
                           </DrawerDescription>
                         </div>
                       </div>
@@ -1279,7 +1281,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="md:col-span-1 lg:col-span-1"
+                className="order-2 md:order-none md:col-span-1 lg:col-span-1"
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
@@ -1289,6 +1291,7 @@ export default function Home() {
                         alt="Christian Duval"
                         className="w-full h-full object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/40 via-[#00C4B8]/30 to-[#00AEA9]/40"></div>
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl md:text-2xl font-bold mb-3">
@@ -1328,9 +1331,6 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                            Co-Host
-                          </Badge>
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             Christian Duval
                           </DrawerTitle>
@@ -1373,17 +1373,18 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
                 whileHover={{ scale: 1.02 }}
-                className="md:col-span-2 lg:col-span-2"
+                className="order-1 md:order-none md:col-span-2 lg:col-span-2"
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
                     <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
-                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0 relative">
                         <ImageWithFallback
                           src="/katiesouza.jpg"
                           alt="Katie Souza"
                           className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/40 via-[#00C4B8]/30 to-[#00AEA9]/40"></div>
                       </div>
                       <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
@@ -1422,9 +1423,6 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                            Featured Speaker
-                          </Badge>
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             Katie Souza
                           </DrawerTitle>
@@ -1459,7 +1457,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="md:col-span-1 lg:col-span-1"
+                className="order-2 md:order-none md:col-span-1 lg:col-span-1"
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
@@ -1469,13 +1467,20 @@ export default function Home() {
                         alt="Todd Edwards"
                         className="w-full h-full object-cover"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/40 via-[#00C4B8]/30 to-[#00AEA9]/40"></div>
                     </div>
                     <CardContent className="p-6">
                       <h3 className="text-xl md:text-2xl font-bold mb-3">
                         Todd Edwards
                       </h3>
                       <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
-                        Details coming soon.
+                        Todd Edwards is a senior executive with over three
+                        decades of experience. As a senior leader at BRIDE
+                        Ministries International, he created the Todd Talks
+                        podcast from his bi-weekly Saturday Bible Study. He is
+                        an ordained apostle and board member who has served the
+                        body of Christ through evangelism, teaching, prayer and
+                        deliverance for over 30 years.
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
@@ -1500,14 +1505,21 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                            Featured Speaker
-                          </Badge>
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             Todd Edwards
                           </DrawerTitle>
                           <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                            Details coming soon.
+                            Todd Edwards is a senior executive at a software
+                            company with over three decades of experience. As a
+                            senior leader at BRIDE Ministries International and
+                            close friend of Daniel Duval, Todd created the Todd
+                            Talks podcast from his bi-weekly Saturday Bible
+                            Study, discussing Biblical truth that supports BRIDE
+                            Ministries&apos; revelation on the Kingdom of God.
+                            He is an ordained apostle and board member who has
+                            served the body of Christ through evangelism,
+                            teaching, prayer and deliverance for over 30 years,
+                            including nine years with Bride Ministries.
                           </DrawerDescription>
                         </div>
                       </div>
@@ -1529,17 +1541,18 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
                 whileHover={{ scale: 1.02 }}
-                className="md:col-span-2 lg:col-span-2"
+                className="order-1 md:order-none md:col-span-2 lg:col-span-2"
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
                     <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
-                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0 relative">
                         <ImageWithFallback
                           src="/davidherzog.jpeg"
                           alt="David Herzog"
                           className="w-full h-full object-cover"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/40 via-[#00C4B8]/30 to-[#00AEA9]/40"></div>
                       </div>
                       <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
@@ -1579,9 +1592,6 @@ export default function Home() {
                           />
                         </div>
                         <div className="flex-1">
-                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                            Featured Speaker
-                          </Badge>
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             David Herzog
                           </DrawerTitle>
@@ -1628,11 +1638,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 }}
                 whileHover={{ scale: 1.03, y: -5 }}
-                className="md:col-span-1 lg:col-span-1"
+                className="order-2 md:order-none md:col-span-1 lg:col-span-1"
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
-                    <div className="relative h-64 bg-gradient-to-br from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] flex items-center justify-center overflow-hidden">
+                    <div className="relative h-64 bg-gradient-to-br from-zinc-700 via-zinc-600 to-zinc-700 flex items-center justify-center overflow-hidden">
                       <motion.div
                         animate={{
                           backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -1642,7 +1652,7 @@ export default function Home() {
                           repeat: Infinity,
                           ease: "linear",
                         }}
-                        className="absolute inset-0 bg-gradient-to-r from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] bg-[length:200%_100%]"
+                        className="absolute inset-0 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-700 bg-[length:200%_100%]"
                       />
                       <motion.div
                         animate={{
@@ -1800,7 +1810,7 @@ export default function Home() {
           <motion.div {...fadeInUp} className="text-center mb-16 text-white">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9] text-white border-none px-6 py-2 mb-6 rounded-full">
-                Investment in Your Future
+                Best Deal Of The Season
               </Badge>
             </motion.div>
             <motion.h2
@@ -1813,8 +1823,7 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-300 max-w-2xl mx-auto"
             >
-              Limited spaces available. Don&apos;t miss this opportunity for
-              transformation.
+              Limited spaces available. Lock in low registration rates today!
             </motion.p>
           </motion.div>
 
@@ -1883,7 +1892,7 @@ export default function Home() {
                       }}
                       className="flex items-center justify-center gap-3 mb-3 relative"
                     >
-                      <span className="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-2xl md:text-3xl font-bold text-red-500 line-through">
+                      <span className="absolute -top-4 -right-2 md:-top-6 md:-right-6 text-2xl md:text-3xl font-bold text-red-500 line-through">
                         $75
                       </span>
                       <motion.div
@@ -1927,7 +1936,7 @@ export default function Home() {
                       transition={{ type: "spring", stiffness: 400 }}
                     >
                       <span className="text-[#00AEA9] text-lg font-semibold">
-                        Early Early Bird: Ends Novemeber 23, 2025
+                        Early Early Bird: Ends November 23, 2025
                       </span>
                     </motion.div>
                   </div>
@@ -1935,7 +1944,6 @@ export default function Home() {
                   <div className="space-y-5 mb-10">
                     {[
                       "All teaching sessions & ministry times",
-                      "Personal activation & prayer ministry",
                       "Conference materials & resources",
                       "Access to recorded sessions post-event",
                       "Complimentary Reception",
@@ -2144,21 +2152,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </motion.div>
-
-            {/* Compact Description */}
-            <motion.div {...fadeInUp} className="text-center">
-              <p className="text-base text-zinc-700 leading-relaxed max-w-3xl mx-auto">
-                What began as a small, informal gathering has grown into a
-                life-changing annual encounter with God. Each year, attendance
-                has more than doubled, and momentum continues to build.
-                <span className="font-semibold text-[#00AEA9]">
-                  {" "}
-                  If you&apos;re hungry for more of God, longing for authentic
-                  community, and ready to step into your next level—this is your
-                  invitation.
-                </span>
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -2195,9 +2188,9 @@ export default function Home() {
             <Accordion type="single" collapsible className="space-y-4">
               {[
                 {
-                  question: "I need help with Registration. Who do I contact?",
+                  question: "I need help with registration. Who do I contact?",
                   answer:
-                    "Please visit support.bridemovement.com/help. We have over 45 articles on the most frequently asked questions. If you still need help, you can email us at advance@bridemovement.com and someone from our team will get back to you within 24 hours.",
+                    "Please visit support.bridemovement.com, We have over 45 articles on the most frequently asked questions. If you still need help, you can email us at advance@bridemovement.com and someone from our team will get back to you within 24 hours.",
                 },
                 {
                   question: "When does the event start and end?",
@@ -2207,12 +2200,12 @@ export default function Home() {
                 {
                   question: "How do I book an early arrival?",
                   answer:
-                    "There are limited spots at this moment for Early Arrival we recommend that you book your early arrival as soon as possible before spots sell out!",
+                    "You can book an early arrival room for Wednesday, November 18 during the registration process or email us at advance@bridemovement.com ",
                 },
                 {
                   question: "What is the schedule for the Advance?",
                   answer:
-                    "We do not give out the conference schedule prior to the start of the conference. If you'd like to know what usually takes place at our conference, please check out the following testimony services from prior Bride Tribe Advances.",
+                    "We will share the schedule of the Advance closer to the event date when the details are finalized.",
                 },
                 {
                   question: "How do I update my reservations for 2025 Advance?",
@@ -2220,25 +2213,24 @@ export default function Home() {
                     "Please contact advance@bridemovement.com for any registration updates. Please keep in mind that once your booking order is placed a $15 administration fee will be charged. We can not guarantee adding additional attendees due to room capacity.",
                 },
                 {
-                  question: "Will my registration include meals?",
-                  answer:
-                    "In an effort to provide attendees with the ability to plan meals according to their own dietary needs, budget, and convenience and due to the growing size of the event we are NOT coordinating lunch or dinner on site. There are many incredible options within walking distance from the event location!",
-                },
-
-                {
                   question: "Will the Bride Tribe Advance be Live Streamed?",
                   answer:
-                    "Yes! Our Annual Bride Tribe Advance will be live-streamed. Live Stream Passes are now on SALE!",
+                    "Yes! Our Annual Bride Tribe Advance will be live-streamed. Live Stream Passes are now on SALE.",
                 },
                 {
                   question: "What are parking cost associated with my stay?",
                   answer:
-                    "The Westin Oaks at Galleria Houston has complementary self-parking during your stay!",
+                    "The Westin Galleria Houston has complementary self-parking during your stay.",
                 },
                 {
                   question: "What time is Hotel Check in?",
                   answer:
                     "Hotel check-in for the conference will begin at 3:00 PM CST and check out is at 12 PM CST. Conference registration will open at 8:30 AM on Thursday morning.",
+                },
+                {
+                  question: "Do you offer payment plans?",
+                  answer:
+                    "Yes. If you need to set up a payment plan, you can do so by contacting the registration team at advance@bridemovement.com",
                 },
               ].map((item, index) => (
                 <AccordionItem
@@ -2273,8 +2265,8 @@ export default function Home() {
               {...fadeIn}
               className="text-xl md:text-2xl text-zinc-600 mb-12 max-w-3xl mx-auto"
             >
-              Don&apos;t let this opportunity pass you by. Join us for four days
-              that could change the trajectory of your spiritual life forever.
+              Don&apos;t let this opportunity pass you by. Join us for three
+              days that could change your life!
             </motion.p>
             <motion.div {...scaleIn}>
               <Button
@@ -2302,13 +2294,14 @@ export default function Home() {
       <footer className="bg-zinc-900 text-white py-16 snap-none">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-12">
+            {/* Mission moved below */}
             {/* Logo & About */}
             <div>
-              <h3 className="text-3xl font-bold mb-4">Bride Tribe</h3>
+              <h3 className="text-3xl font-bold mb-4">Mission</h3>
               <p className="text-zinc-400 mb-6 max-w-md text-lg">
-                Equipping the Bride of Christ for breakthrough, healing, and
-                spiritual warfare through biblical teaching and powerful
-                ministry.
+                It is our vision to promote unity in the body of Christ
+                worldwide and assist in the creation and development of Sheep
+                Nations.
               </p>
             </div>
 
@@ -2317,32 +2310,36 @@ export default function Home() {
               <h4 className="text-xl font-bold mb-6">Contact</h4>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-zinc-400 text-lg">
-                  <Mail className="h-5 w-5 text-[#00AEA9]" />
-                  <span>info@brideministries.com</span>
+                  <Mail className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
+                  <a
+                    href="mailto:advance@bridemovement.com"
+                    className="hover:text-[#00AEA9] transition-colors"
+                  >
+                    advance@bridemovement.com
+                  </a>
                 </li>
-                <li className="text-zinc-400 text-lg">Houston, Texas</li>
+                <li className="flex items-center gap-2 text-zinc-400 text-lg">
+                  <Phone className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
+                  <a
+                    href="tel:832-906-7497"
+                    className="hover:text-[#00AEA9] transition-colors"
+                  >
+                    832-906-7497
+                  </a>
+                </li>
+                <li className="flex items-center gap-2 text-zinc-400 text-lg">
+                  <MapPin className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
+                  <span>4817 Schlipf Rd, Katy, TX 77493</span>
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-zinc-400">
-              © 2026 Bride Tribe. All rights reserved.
+              © 2026 Bride Ministries International. All rights reserved.
             </p>
-            <div className="flex gap-6 items-center">
-              <a
-                href="#"
-                className="text-zinc-400 hover:text-[#00AEA9] transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="text-zinc-400 hover:text-[#00AEA9] transition-colors"
-              >
-                Terms of Service
-              </a>
-            </div>
+            <div className="flex gap-6 items-center"></div>
           </div>
         </div>
       </footer>
