@@ -1298,8 +1298,8 @@ export default function Home() {
                         Christian Duval, brings a powerful prophetic anointing
                         and a heart for inner healing. Together with Dan, she
                         co-leads Bride Tribe, ministering to thousands with
-                        breakthrough, activation, and the restoration of God's
-                        people.
+                        breakthrough, activation, and the restoration of
+                        God&apos;s people.
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
@@ -1343,14 +1343,15 @@ export default function Home() {
                             for prophetic activation, helping people discover
                             and step into their spiritual gifts and divine
                             calling. Her ministry focuses on inner healing,
-                            deliverance, and the restoration of God's people.
-                            With a heart for seeing believers fully activated in
-                            their purpose, Christian combines practical teaching
-                            with powerful prophetic ministry, creating an
-                            atmosphere where breakthrough and healing flow
-                            freely. Her partnership with Dan in ministry has
-                            impacted countless lives, bringing clarity, freedom,
-                            and activation to the Body of Christ.
+                            deliverance, and the restoration of God&apos;s
+                            people. With a heart for seeing believers fully
+                            activated in their purpose, Christian combines
+                            practical teaching with powerful prophetic ministry,
+                            creating an atmosphere where breakthrough and
+                            healing flow freely. Her partnership with Dan in
+                            ministry has impacted countless lives, bringing
+                            clarity, freedom, and activation to the Body of
+                            Christ.
                           </DrawerDescription>
                         </div>
                       </div>
@@ -1546,9 +1547,9 @@ export default function Home() {
                         </h3>
                         <p className="text-lg md:text-xl text-zinc-600 mb-6 leading-relaxed">
                           Co-founder of The Glory Zone and Awaken2020. Author of
-                          11 books including 'Glory Invasion'. Ministered in
-                          over 70 nations seeing incredible healings, miracles,
-                          signs and wonders.
+                          11 books including &apos;Glory Invasion&apos;.
+                          Ministered in over 70 nations seeing incredible
+                          healings, miracles, signs and wonders.
                         </p>
                         <div className="space-y-3">
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
@@ -1590,21 +1591,22 @@ export default function Home() {
                             and teaching ministry and extensive revelation on
                             living and operating in the Glory of God and seeing
                             national Awakening. He is the author of 11 books
-                            including 'Glory Invasion'. He has been a guest on
-                            numerous TV shows such as Daystar, TBN, It's
-                            Supernatural and the Fox News Channel. Dr. David and
-                            Stephanie based in Phoenix, Arizona have been in
-                            full time ministry for over 32 years and have lived
-                            12 years on the mission field. David and his wife
-                            Stephanie have ministered in over 70 nations in
-                            large national evangelistic stadiums, hosting and
-                            speaking in conferences, churches, revivals, and
-                            outreaches seeing incredible healings, miracles,
-                            signs and wonders and deliverances confirming the
-                            Gospel message. Dr. David Herzog also prophetically
-                            counsels and prays with Presidents, Vice Presidents,
-                            Prime Ministers and other government leaders, media
-                            and celebrities in the entertainment industry.
+                            including &apos;Glory Invasion&apos;. He has been a
+                            guest on numerous TV shows such as Daystar, TBN,
+                            It&apos;s Supernatural and the Fox News Channel. Dr.
+                            David and Stephanie based in Phoenix, Arizona have
+                            been in full time ministry for over 32 years and
+                            have lived 12 years on the mission field. David and
+                            his wife Stephanie have ministered in over 70
+                            nations in large national evangelistic stadiums,
+                            hosting and speaking in conferences, churches,
+                            revivals, and outreaches seeing incredible healings,
+                            miracles, signs and wonders and deliverances
+                            confirming the Gospel message. Dr. David Herzog also
+                            prophetically counsels and prays with Presidents,
+                            Vice Presidents, Prime Ministers and other
+                            government leaders, media and celebrities in the
+                            entertainment industry.
                           </DrawerDescription>
                         </div>
                       </div>
@@ -2222,11 +2224,7 @@ export default function Home() {
                   answer:
                     "In an effort to provide attendees with the ability to plan meals according to their own dietary needs, budget, and convenience and due to the growing size of the event we are NOT coordinating lunch or dinner on site. There are many incredible options within walking distance from the event location!",
                 },
-                {
-                  question: "Do you have DayPasses Available?",
-                  answer:
-                    "We currently are sold out of Daypasses. You are welcomed to join our waitlist and if anyone cancels their reservation for Day Passes we will reach out to you via email.",
-                },
+
                 {
                   question: "Will the Bride Tribe Advance be Live Streamed?",
                   answer:
