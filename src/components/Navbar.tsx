@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Menu, X } from "lucide-react";
 
 const navItems = [
   { id: "hero", label: "Home" },
@@ -20,7 +19,6 @@ const navItems = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
@@ -68,7 +66,6 @@ export function Navbar() {
         behavior: "smooth",
       });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -76,14 +73,14 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`hidden lg:block fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-zinc-200"
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left Navigation Links */}
           <div className="hidden lg:flex items-center gap-1 flex-1">
             {navItems.slice(1, 5).map((item) => (
@@ -117,11 +114,11 @@ export function Navbar() {
           <div className="flex-1 flex justify-center">
             <motion.button
               onClick={() => scrollToSection("hero")}
-              className={`flex items-center hover:opacity-90 transition-opacity ${!isScrolled ? 'mt-4 sm:mt-4 md:mt-4' : ''}`}
+              className="flex items-center hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className={`relative ${isScrolled ? 'w-20 h-20' : 'w-20 h-20 sm:w-24 sm:h-24'} transition-all duration-300`}>
+              <div className={`relative ${isScrolled ? 'w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20' : 'w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24'} transition-all duration-300`}>
                 <ImageWithFallback
                   src="/logo.png"
                   alt="Bride Tribe Logo"
@@ -164,67 +161,13 @@ export function Navbar() {
             ))}
             <Button
               onClick={() => window.open("https://bridechurch.churchcenter.com/registrations/events/3225360", "_blank")}
-              className="ml-4 bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] text-white border-0 rounded-full px-6"
+              className="ml-4 bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] text-white border-0 rounded-full px-4 py-2 text-sm"
             >
               Register Now
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled
-                ? "text-zinc-900 hover:bg-zinc-100"
-                : "text-white hover:bg-white/10"
-            }`}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden overflow-hidden bg-white/95 backdrop-blur-md border-t border-zinc-200"
-          >
-            <div className="container mx-auto px-6 py-4 space-y-2">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors ${
-                    activeSection === item.id
-                      ? "bg-[#00AEA9]/10 text-[#00AEA9]"
-                      : "text-zinc-700 hover:bg-zinc-100"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-              <Button
-                onClick={() => {
-                  window.open("https://bridechurch.churchcenter.com/registrations/events/3225360", "_blank");
-                  setIsMobileMenuOpen(false);
-                }}
-                className="w-full mt-4 bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] text-white border-0 rounded-full"
-              >
-                Register Now
-              </Button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.nav>
   );
 }

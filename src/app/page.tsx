@@ -37,9 +37,6 @@ import {
   Clock,
   DollarSign,
   Mail,
-  Facebook,
-  Instagram,
-  Youtube,
   ArrowDown,
   ArrowUp,
   Zap,
@@ -450,8 +447,11 @@ export default function Home() {
       </section>
 
       {/* Why Attend Section - Funnel Step 1 */}
-      <section id="why-attend" className="py-16 bg-white snap-start">
-        <div className="container mx-auto px-6">
+      <section
+        id="why-attend"
+        className="py-16 sm:py-24 md:py-32 bg-white snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
@@ -550,7 +550,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative -my-20 md:-my-16 z-50"
+        className="relative -my-20 md:-my-16 z-40"
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
@@ -608,8 +608,11 @@ export default function Home() {
       </motion.div>
 
       {/* Event Overview Section - Funnel Step 2 */}
-      <section id="experience" className="py-32 bg-zinc-50 snap-start">
-        <div className="container mx-auto px-6">
+      <section
+        id="experience"
+        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
@@ -817,7 +820,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative -my-16 z-50"
+        className="relative -my-16 z-40"
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
@@ -879,8 +882,11 @@ export default function Home() {
       </motion.div>
 
       {/* Transformation Gallery Section - Funnel Step 3 */}
-      <section id="gallery" className="py-32 bg-white snap-start">
-        <div className="container mx-auto px-6">
+      <section
+        id="gallery"
+        className="py-16 sm:py-24 md:py-32 bg-white snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
               Real Stories, Real Impact
@@ -900,7 +906,7 @@ export default function Home() {
             <motion.div {...fadeInUp} className="md:col-span-2">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl h-full">
                 <ImageWithFallback
-                  src="/1Z0A5028-scaled.jpg"
+                  src="/exp_4.jpg"
                   alt="Worship Moment"
                   className="w-full h-full min-h-[500px] object-cover"
                 />
@@ -923,7 +929,7 @@ export default function Home() {
             <motion.div {...fadeInUp} className="space-y-8">
               <div className="relative rounded-3xl overflow-hidden shadow-xl h-64">
                 <ImageWithFallback
-                  src="/1Z0A5123.jpg"
+                  src="/exp_2.jpg"
                   alt="Prayer Ministry"
                   className="w-full h-full object-cover"
                 />
@@ -937,21 +943,21 @@ export default function Home() {
 
               <div className="relative rounded-3xl overflow-hidden shadow-xl h-64">
                 <ImageWithFallback
-                  src="/1Z0A5179.jpg"
+                  src="/exp_3.jpg"
                   alt="Community"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/70 via-zinc-800/60 to-zinc-900/70"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h4 className="text-xl font-bold text-white">
-                    Build Community
+                    Glory Encounter
                   </h4>
                 </div>
               </div>
 
               <div className="relative rounded-3xl overflow-hidden shadow-xl h-64">
                 <ImageWithFallback
-                  src="/1Z0A5015.jpg"
+                  src="/exp_1.jpg"
                   alt="Transformation"
                   className="w-full h-full object-cover"
                 />
@@ -974,10 +980,159 @@ export default function Home() {
                   "_blank"
                 )
               }
-              className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-7 text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
+              className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-7 text-base sm:text-lg md:text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300 w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center">
-                I&apos;m Ready to Transform
+                Early Bird Special Available Now!
+                <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+      {/* Combined Schedule Section with Carousel - Funnel Step 5 */}
+      <section
+        id="schedule"
+        className="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden snap-start"
+      >
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <motion.div {...fadeInUp} className="text-center mb-20">
+            <Badge className="bg-[#00AEA9] text-white border-none px-6 py-2 mb-6 rounded-full">
+              Your Complete Journey
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-white to-[#00AEA9] bg-clip-text text-transparent">
+                3 Days In The Glory{" "}
+                <span className="text-[#00AEA9] drop-shadow-[0_0_20px_rgba(0,174,169,0.8)]">
+                  2026
+                </span>
+              </span>
+            </h2>
+            <p className="text-2xl md:text-3xl text-zinc-300 max-w-4xl mx-auto leading-relaxed">
+              Each day builds upon the last, opening up revelatory realms of the
+              spirit leading to breakthrough, healing and miracles.
+            </p>
+          </motion.div>
+
+          <div className="max-w-6xl mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[
+                  {
+                    dayNumber: 1,
+                    date: "",
+                    title: "Day One",
+                    description:
+                      "Details coming soon. Join us for a powerful start to your transformation journey.",
+                    time: "Thursday the 19th",
+                    image: "/hero_section_small_backdrop.jpg",
+                    badge: "Coming Soon",
+                  },
+                  {
+                    dayNumber: 2,
+                    title: "Day Two",
+                    description:
+                      "Details coming soon. Experience continued breakthrough and activation.",
+                    time: "Friday, November 20th",
+                    image: "/hero_section_small_backdrop.jpg",
+                    badge: "Coming Soon",
+                  },
+                  {
+                    dayNumber: 3,
+                    title: "Day Three",
+                    description:
+                      "Details coming soon. Step deeper into your calling and purpose.",
+                    time: "Saturday, November 21st",
+                    image: "/hero_section_small_backdrop.jpg",
+                    badge: "Coming Soon",
+                  },
+                ].map((dayData, index) => (
+                  <CarouselItem key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Card className="border-none shadow-2xl rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
+                        <CardContent className="p-8 md:p-16">
+                          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+                            <div>
+                              <div className="flex items-center gap-4 mb-6">
+                                {dayData.date && (
+                                  <div className="px-4 py-2 bg-[#00AEA9] rounded-2xl">
+                                    <span className="text-lg font-semibold text-white">
+                                      {dayData.date}
+                                    </span>
+                                  </div>
+                                )}
+                                <div>
+                                  <h3 className="text-3xl md:text-4xl text-white font-bold">
+                                    {dayData.title}
+                                  </h3>
+                                </div>
+                              </div>
+                              <div className="flex items-center gap-3 text-zinc-300 text-xl mb-8">
+                                <Clock className="h-6 w-6 text-[#00AEA9]" />
+                                <span>{dayData.time}</span>
+                              </div>
+                              <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed">
+                                {dayData.description}
+                              </p>
+                            </div>
+
+                            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                              <ImageWithFallback
+                                src={dayData.image}
+                                alt={`${dayData.title} Experience`}
+                                className="w-full h-[600px] object-cover"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/70 to-transparent"></div>
+                              <div className="absolute bottom-0 left-0 right-0 p-8">
+                                <Badge className="bg-white/20 backdrop-blur-sm text-white border-none mb-3 rounded-full">
+                                  {dayData.badge}
+                                </Badge>
+                                <p className="text-lg text-zinc-200">
+                                  {dayData.description}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-white/10 hover:bg-white/20 text-white border-white/20" />
+              <CarouselNext className="right-4 bg-white/10 hover:bg-white/20 text-white border-white/20" />
+            </Carousel>
+          </div>
+
+          <motion.div {...fadeInUp} className="text-center mt-16">
+            <Button
+              size="lg"
+              onClick={() =>
+                window.open(
+                  "https://bridechurch.churchcenter.com/registrations/events/3225360",
+                  "_blank"
+                )
+              }
+              className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-7 text-base sm:text-lg md:text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300 w-full sm:w-auto"
+            >
+              <span className="relative z-10 flex items-center">
+                Get 65% Off Registration Now!
                 <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
@@ -987,8 +1142,11 @@ export default function Home() {
       </section>
 
       {/* Meet the Hosts Section - Funnel Step 4 */}
-      <section id="hosts" className="py-32 bg-zinc-50 snap-start">
-        <div className="container mx-auto px-6">
+      <section
+        id="hosts"
+        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
@@ -1028,19 +1186,16 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <DrawerTrigger asChild>
-                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl">
-                    <div className="grid md:grid-cols-5 gap-0">
-                      <div className="md:col-span-2">
+                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
+                    <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
                         <ImageWithFallback
-                          src="/1Z0A5430-1.jpg"
+                          src="/danduval.webp"
                           alt="Dan Duval"
-                          className="w-full h-full min-h-[400px] object-cover"
+                          className="w-full h-full object-cover"
                         />
                       </div>
-                      <CardContent className="md:col-span-3 p-8 md:p-12">
-                        <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
-                          Lead Instructor
-                        </Badge>
+                      <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
                           Dan Duval
                         </h3>
@@ -1070,95 +1225,52 @@ export default function Home() {
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-80 h-80 rounded-2xl overflow-hidden flex-shrink-0">
-                        <ImageWithFallback
-                          src="/1Z0A5430-1.jpg"
-                          alt="Dan Duval"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
-                          Lead Instructor
-                        </Badge>
-                        <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          Dan Duval
-                        </DrawerTitle>
-                        <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          With decades of ministry experience, Dan Duval carries
-                          a powerful anointing for deliverance, inner healing,
-                          and spiritual warfare. His teaching brings clarity,
-                          breakthrough, and activation to thousands seeking
-                          deeper intimacy with God. As the founder of Bride
-                          Tribe, Dan has dedicated his life to equipping the
-                          Body of Christ with biblical truth and practical tools
-                          for spiritual warfare. His ministry has transformed
-                          countless lives through deliverance, inner healing,
-                          and the activation of believers into their God-given
-                          purpose. Through his books, teachings, and personal
-                          ministry, Dan continues to be a voice of truth and
-                          freedom in the Church today.
-                        </DrawerDescription>
-                      </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Founder of Bride Tribe
-                          </span>
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="w-full md:w-64 h-64 md:h-80 rounded-2xl overflow-hidden flex-shrink-0">
+                          <ImageWithFallback
+                            src="/danduval.webp"
+                            alt="Dan Duval"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Author & Bible teacher
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Specialist in deliverance ministry
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Inner healing expert
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Spiritual warfare authority
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Ministry training & activation
-                          </span>
+                        <div className="flex-1">
+                          <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
+                            Lead Instructor
+                          </Badge>
+                          <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
+                            Dan Duval
+                          </DrawerTitle>
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
+                            With decades of ministry experience, Dan Duval
+                            carries a powerful anointing for deliverance, inner
+                            healing, and spiritual warfare. His teaching brings
+                            clarity, breakthrough, and activation to thousands
+                            seeking deeper intimacy with God. As the founder of
+                            Bride Tribe, Dan has dedicated his life to equipping
+                            the Body of Christ with biblical truth and practical
+                            tools for spiritual warfare. His ministry has
+                            transformed countless lives through deliverance,
+                            inner healing, and the activation of believers into
+                            their God-given purpose. Through his books,
+                            teachings, and personal ministry, Dan continues to
+                            be a voice of truth and freedom in the Church today.
+                          </DrawerDescription>
                         </div>
                       </div>
-                    </div>
+                    </DrawerHeader>
                   </div>
                 </div>
               </DrawerContent>
             </Drawer>
 
-            {/* Row 1: Katie Souza - Small (1 col) */}
+            {/* Row 1: Christian Duval - Small (1 col) */}
             <Drawer
-              open={openDrawer === "katie"}
-              onOpenChange={(open) => setOpenDrawer(open ? "katie" : null)}
+              open={openDrawer === "christian"}
+              onOpenChange={(open) => setOpenDrawer(open ? "christian" : null)}
             >
               <motion.div
                 {...fadeInUp}
@@ -1171,121 +1283,87 @@ export default function Home() {
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
-                    <div className="relative h-64 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/10 flex items-center justify-center overflow-hidden">
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.1, 1],
-                          opacity: [0.3, 0.5, 0.3],
-                        }}
-                        transition={{
-                          duration: 4,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                        }}
-                        className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/30 to-[#00C4B8]/20"
+                    <div className="relative h-64 overflow-hidden">
+                      <ImageWithFallback
+                        src="/christianduval.jpg"
+                        alt="Christian Duval"
+                        className="w-full h-full object-cover"
                       />
-                      <span className="relative z-10 text-2xl font-bold text-zinc-500">
-                        Demo Image
-                      </span>
                     </div>
                     <CardContent className="p-6">
-                      <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
-                        Featured Speaker
-                      </Badge>
                       <h3 className="text-xl md:text-2xl font-bold mb-3">
-                        Katie Souza
+                        Christian Duval
                       </h3>
                       <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
-                        Katie Souza is a powerful voice in healing and
-                        breakthrough ministry, known for her anointing in
-                        physical and emotional healing.
+                        Christian Duval, brings a powerful prophetic anointing
+                        and a heart for inner healing. Together with Dan, she
+                        co-leads Bride Tribe, ministering to thousands with
+                        breakthrough, activation, and the restoration of God's
+                        people.
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
                           <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Healing ministry</span>
+                          <span>Prophetic minister</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
                           <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Breakthrough activation</span>
+                          <span>Inner healing specialist</span>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
-                        <ImageWithFallback
-                          src="/1Z0A5015.jpg"
-                          alt="Katie Souza"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                          Featured Speaker
-                        </Badge>
-                        <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          Katie Souza
-                        </DrawerTitle>
-                        <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          Katie Souza is a powerful voice in healing and
-                          breakthrough ministry, known for her anointing in
-                          physical and emotional healing. With years of
-                          experience in ministry, she brings a unique
-                          perspective on the healing power of God and how it
-                          transforms lives. Her teachings have helped thousands
-                          discover breakthrough in their spiritual journey and
-                          experience the fullness of God&apos;s healing power.
-                        </DrawerDescription>
-                      </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Healing ministry
-                          </span>
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
+                          <ImageWithFallback
+                            src="/christianduval.jpg"
+                            alt="Christian Duval"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Breakthrough activation
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Physical healing
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Emotional restoration
-                          </span>
+                        <div className="flex-1">
+                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
+                            Co-Host
+                          </Badge>
+                          <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
+                            Christian Duval
+                          </DrawerTitle>
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
+                            Christian Duval, is a powerful voice in prophetic
+                            ministry and inner healing. Together with Dan, she
+                            co-leads Bride Tribe, bringing decades of experience
+                            in equipping believers for breakthrough and
+                            transformation. Christian carries a unique anointing
+                            for prophetic activation, helping people discover
+                            and step into their spiritual gifts and divine
+                            calling. Her ministry focuses on inner healing,
+                            deliverance, and the restoration of God's people.
+                            With a heart for seeing believers fully activated in
+                            their purpose, Christian combines practical teaching
+                            with powerful prophetic ministry, creating an
+                            atmosphere where breakthrough and healing flow
+                            freely. Her partnership with Dan in ministry has
+                            impacted countless lives, bringing clarity, freedom,
+                            and activation to the Body of Christ.
+                          </DrawerDescription>
                         </div>
                       </div>
-                    </div>
+                    </DrawerHeader>
                   </div>
                 </div>
               </DrawerContent>
             </Drawer>
 
-            {/* Row 2: Christian Duval - Horizontal (spans 2 cols) */}
+            {/* Row 2: Katie Souza - Horizontal (spans 2 cols) */}
             <Drawer
-              open={openDrawer === "christian"}
-              onOpenChange={(open) => setOpenDrawer(open ? "christian" : null)}
+              open={openDrawer === "katie"}
+              onOpenChange={(open) => setOpenDrawer(open ? "katie" : null)}
             >
               <motion.div
                 {...fadeInUp}
@@ -1297,48 +1375,32 @@ export default function Home() {
                 className="md:col-span-2 lg:col-span-2"
               >
                 <DrawerTrigger asChild>
-                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl">
-                    <div className="grid md:grid-cols-5 gap-0">
-                      <div className="md:col-span-2">
-                        <div className="relative h-full min-h-[400px] bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center overflow-hidden">
-                          <motion.div
-                            animate={{
-                              scale: [1, 1.1, 1],
-                              opacity: [0.3, 0.5, 0.3],
-                            }}
-                            transition={{
-                              duration: 4,
-                              repeat: Infinity,
-                              ease: "easeInOut",
-                              delay: 0.7,
-                            }}
-                            className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/20"
-                          />
-                          <span className="relative z-10 text-2xl font-bold text-zinc-500">
-                            Demo Image
-                          </span>
-                        </div>
+                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
+                    <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
+                        <ImageWithFallback
+                          src="/katiesouza.jpg"
+                          alt="Katie Souza"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <CardContent className="md:col-span-3 p-8 md:p-12">
-                        <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
-                          Co-Host
-                        </Badge>
+                      <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                          Christian Duval
+                          Katie Souza
                         </h3>
                         <p className="text-lg md:text-xl text-zinc-600 mb-6 leading-relaxed">
-                          Christian brings a prophetic edge to ministry, helping
-                          believers unlock their spiritual gifts and walk in
-                          their divine calling.
+                          Katie Souza is a powerful voice in healing and
+                          breakthrough ministry, known for her anointing in
+                          physical and emotional healing.
                         </p>
                         <div className="space-y-3">
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
                             <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
-                            <span>Prophetic minister</span>
+                            <span>Healing ministry</span>
                           </div>
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
                             <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
-                            <span>Inner healing specialist</span>
+                            <span>Breakthrough activation</span>
                           </div>
                         </div>
                       </CardContent>
@@ -1346,78 +1408,48 @@ export default function Home() {
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
-                        <ImageWithFallback
-                          src="/1Z0A5179.jpg"
-                          alt="Christian Duval"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                          Co-Host
-                        </Badge>
-                        <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          Christian Duval
-                        </DrawerTitle>
-                        <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          Christian brings a prophetic edge to ministry, helping
-                          believers unlock their spiritual gifts and walk in
-                          their divine calling. With a passion for seeing people
-                          activated in their God-given purpose, he combines
-                          practical teaching with powerful prophetic ministry.
-                          His approach to inner healing and spiritual gifts has
-                          helped many discover and step into their unique
-                          calling in the Kingdom.
-                        </DrawerDescription>
-                      </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Prophetic minister
-                          </span>
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
+                          <ImageWithFallback
+                            src="/katiesouza.jpg"
+                            alt="Katie Souza"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Inner healing specialist
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Spiritual gifts activation
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Prophetic training
-                          </span>
+                        <div className="flex-1">
+                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
+                            Featured Speaker
+                          </Badge>
+                          <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
+                            Katie Souza
+                          </DrawerTitle>
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
+                            Katie Souza is a powerful voice in healing and
+                            breakthrough ministry, known for her anointing in
+                            physical and emotional healing. With years of
+                            experience in ministry, she brings a unique
+                            perspective on the healing power of God and how it
+                            transforms lives. Her teachings have helped
+                            thousands discover breakthrough in their spiritual
+                            journey and experience the fullness of God&apos;s
+                            healing power.
+                          </DrawerDescription>
                         </div>
                       </div>
-                    </div>
+                    </DrawerHeader>
                   </div>
                 </div>
               </DrawerContent>
             </Drawer>
 
-            {/* Row 2: David Herzog - Small (1 col) */}
+            {/* Row 2: Todd Edwards - Small (1 col) */}
             <Drawer
-              open={openDrawer === "david"}
-              onOpenChange={(open) => setOpenDrawer(open ? "david" : null)}
+              open={openDrawer === "todd"}
+              onOpenChange={(open) => setOpenDrawer(open ? "todd" : null)}
             >
               <motion.div
                 {...fadeInUp}
@@ -1430,122 +1462,64 @@ export default function Home() {
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
-                    <div className="relative h-64 bg-gradient-to-br from-[#00C4B8]/20 to-[#00AEA9]/10 flex items-center justify-center overflow-hidden">
-                      <motion.div
-                        animate={{
-                          scale: [1, 1.1, 1],
-                          opacity: [0.3, 0.5, 0.3],
-                        }}
-                        transition={{
-                          duration: 4,
-                          repeat: Infinity,
-                          ease: "easeInOut",
-                          delay: 0.5,
-                        }}
-                        className="absolute inset-0 bg-gradient-to-br from-[#00C4B8]/30 to-[#00AEA9]/20"
+                    <div className="relative h-64 overflow-hidden">
+                      <ImageWithFallback
+                        src="/toddedwards.png"
+                        alt="Todd Edwards"
+                        className="w-full h-full object-cover"
                       />
-                      <span className="relative z-10 text-2xl font-bold text-zinc-500">
-                        Demo Image
-                      </span>
                     </div>
                     <CardContent className="p-6">
-                      <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
-                        Featured Speaker
-                      </Badge>
                       <h3 className="text-xl md:text-2xl font-bold mb-3">
-                        David Herzog
+                        Todd Edwards
                       </h3>
                       <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
-                        David Herzog brings powerful prophetic ministry and
-                        global revival insights to equip believers for their
-                        calling.
+                        Details coming soon.
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
                           <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Prophetic ministry</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
-                          <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Global revival</span>
+                          <span>Ministry leader</span>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
-                        <ImageWithFallback
-                          src="/1Z0A5123.jpg"
-                          alt="David Herzog"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                          Featured Speaker
-                        </Badge>
-                        <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          David Herzog
-                        </DrawerTitle>
-                        <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          David Herzog brings powerful prophetic ministry and
-                          global revival insights to equip believers for their
-                          calling. With decades of experience traveling the
-                          world and seeing God move in extraordinary ways, he
-                          shares practical wisdom and prophetic revelation that
-                          activates believers into their divine purpose. His
-                          ministry has impacted nations and transformed
-                          countless lives through the power of the Holy Spirit.
-                        </DrawerDescription>
-                      </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Prophetic ministry
-                          </span>
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
+                          <ImageWithFallback
+                            src="/toddedwards.png"
+                            alt="Todd Edwards"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Global revival
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            International ministry
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Prophetic activation
-                          </span>
+                        <div className="flex-1">
+                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
+                            Featured Speaker
+                          </Badge>
+                          <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
+                            Todd Edwards
+                          </DrawerTitle>
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
+                            Details coming soon.
+                          </DrawerDescription>
                         </div>
                       </div>
-                    </div>
+                    </DrawerHeader>
                   </div>
                 </div>
               </DrawerContent>
             </Drawer>
 
-            {/* Row 3: Demo Speaker - Horizontal (spans 2 cols) */}
+            {/* Row 3: David Herzog - Horizontal (spans 2 cols) */}
             <Drawer
-              open={openDrawer === "demo"}
-              onOpenChange={(open) => setOpenDrawer(open ? "demo" : null)}
+              open={openDrawer === "david"}
+              onOpenChange={(open) => setOpenDrawer(open ? "david" : null)}
             >
               <motion.div
                 {...fadeInUp}
@@ -1557,48 +1531,33 @@ export default function Home() {
                 className="md:col-span-2 lg:col-span-2"
               >
                 <DrawerTrigger asChild>
-                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl">
-                    <div className="grid md:grid-cols-5 gap-0">
-                      <div className="md:col-span-2">
-                        <div className="relative h-full min-h-[400px] bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center overflow-hidden">
-                          <motion.div
-                            animate={{
-                              scale: [1, 1.1, 1],
-                              opacity: [0.3, 0.5, 0.3],
-                            }}
-                            transition={{
-                              duration: 4,
-                              repeat: Infinity,
-                              ease: "easeInOut",
-                              delay: 0.9,
-                            }}
-                            className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/20"
-                          />
-                          <span className="relative z-10 text-2xl font-bold text-zinc-500">
-                            Demo Image
-                          </span>
-                        </div>
+                  <Card className="border-none shadow-2xl overflow-hidden rounded-3xl h-full cursor-pointer transition-all hover:shadow-3xl flex flex-col">
+                    <div className="grid md:grid-cols-5 gap-0 flex-1 min-h-0">
+                      <div className="md:col-span-2 h-full min-h-[300px] md:min-h-0">
+                        <ImageWithFallback
+                          src="/davidherzog.jpeg"
+                          alt="David Herzog"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <CardContent className="md:col-span-3 p-8 md:p-12">
-                        <Badge className="bg-[#00AEA9] hover:bg-[#00AEA9]/90 border-none mb-4 rounded-full">
-                          Ministry Leader
-                        </Badge>
+                      <CardContent className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
                         <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                          Demo Speaker
+                          David Herzog
                         </h3>
                         <p className="text-lg md:text-xl text-zinc-600 mb-6 leading-relaxed">
-                          With a strong foundation in spiritual warfare and
-                          deliverance, this speaker equips believers to stand
-                          victorious in their faith.
+                          Co-founder of The Glory Zone and Awaken2020. Author of
+                          11 books including 'Glory Invasion'. Ministered in
+                          over 70 nations seeing incredible healings, miracles,
+                          signs and wonders.
                         </p>
                         <div className="space-y-3">
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
                             <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
-                            <span>Spiritual warfare expert</span>
+                            <span>Prophetic ministry</span>
                           </div>
                           <div className="flex items-center gap-4 text-base md:text-lg text-zinc-700">
                             <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0" />
-                            <span>Deliverance practitioner</span>
+                            <span>Global revival</span>
                           </div>
                         </div>
                       </CardContent>
@@ -1606,76 +1565,59 @@ export default function Home() {
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-zinc-500">
-                          Demo Image
-                        </span>
-                      </div>
-                      <div className="flex-1">
-                        <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                          Ministry Leader
-                        </Badge>
-                        <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          Demo Speaker
-                        </DrawerTitle>
-                        <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          With a strong foundation in spiritual warfare and
-                          deliverance, this speaker equips believers to stand
-                          victorious in their faith. Through practical teaching
-                          and powerful ministry, attendees learn to recognize
-                          and overcome spiritual opposition while walking in the
-                          authority given to them in Christ. This ministry has
-                          helped many break free from bondage and step into
-                          greater freedom.
-                        </DrawerDescription>
-                      </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Spiritual warfare expert
-                          </span>
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="flex flex-col md:flex-row gap-6 items-start">
+                        <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0">
+                          <ImageWithFallback
+                            src="/davidherzog.jpeg"
+                            alt="David Herzog"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Deliverance practitioner
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Authority in Christ
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Freedom ministry
-                          </span>
+                        <div className="flex-1">
+                          <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
+                            Featured Speaker
+                          </Badge>
+                          <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
+                            David Herzog
+                          </DrawerTitle>
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed whitespace-pre-line">
+                            Dr. David Herzog is the co-founder of The Glory Zone
+                            and Awaken2020. David has an evangelistic, prophetic
+                            and teaching ministry and extensive revelation on
+                            living and operating in the Glory of God and seeing
+                            national Awakening. He is the author of 11 books
+                            including 'Glory Invasion'. He has been a guest on
+                            numerous TV shows such as Daystar, TBN, It's
+                            Supernatural and the Fox News Channel. Dr. David and
+                            Stephanie based in Phoenix, Arizona have been in
+                            full time ministry for over 32 years and have lived
+                            12 years on the mission field. David and his wife
+                            Stephanie have ministered in over 70 nations in
+                            large national evangelistic stadiums, hosting and
+                            speaking in conferences, churches, revivals, and
+                            outreaches seeing incredible healings, miracles,
+                            signs and wonders and deliverances confirming the
+                            Gospel message. Dr. David Herzog also prophetically
+                            counsels and prays with Presidents, Vice Presidents,
+                            Prime Ministers and other government leaders, media
+                            and celebrities in the entertainment industry.
+                          </DrawerDescription>
                         </div>
                       </div>
-                    </div>
+                    </DrawerHeader>
                   </div>
                 </div>
               </DrawerContent>
             </Drawer>
 
-            {/* Row 3: Demo Speaker 2 - Small (1 col) */}
+            {/* Row 3: More Speakers - Small (1 col) */}
             <Drawer
-              open={openDrawer === "demo2"}
-              onOpenChange={(open) => setOpenDrawer(open ? "demo2" : null)}
+              open={openDrawer === "more"}
+              onOpenChange={(open) => setOpenDrawer(open ? "more" : null)}
             >
               <motion.div
                 {...fadeInUp}
@@ -1688,108 +1630,149 @@ export default function Home() {
               >
                 <DrawerTrigger asChild>
                   <Card className="border-none shadow-xl overflow-hidden rounded-3xl h-full bg-gradient-to-br from-white to-zinc-50 cursor-pointer transition-all hover:shadow-2xl">
-                    <div className="relative h-64 bg-gradient-to-br from-[#00AEA9]/20 to-[#00C4B8]/10 flex items-center justify-center overflow-hidden">
+                    <div className="relative h-64 bg-gradient-to-br from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] flex items-center justify-center overflow-hidden">
                       <motion.div
                         animate={{
-                          scale: [1, 1.1, 1],
-                          opacity: [0.3, 0.5, 0.3],
+                          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                         }}
                         transition={{
-                          duration: 4,
+                          duration: 5,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className="absolute inset-0 bg-gradient-to-r from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] bg-[length:200%_100%]"
+                      />
+                      <motion.div
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          rotate: [0, 180, 360],
+                        }}
+                        transition={{
+                          duration: 8,
                           repeat: Infinity,
                           ease: "easeInOut",
-                          delay: 1.1,
                         }}
-                        className="absolute inset-0 bg-gradient-to-br from-[#00AEA9]/30 to-[#00C4B8]/20"
+                        className="relative z-10"
+                      >
+                        <div className="text-6xl">✨</div>
+                      </motion.div>
+                      <motion.div
+                        animate={{
+                          opacity: [0.3, 0.6, 0.3],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
+                        className="absolute inset-0 bg-white/10"
                       />
-                      <span className="relative z-10 text-2xl font-bold text-zinc-500">
-                        Demo Image
-                      </span>
                     </div>
                     <CardContent className="p-6">
-                      <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-3 rounded-full">
-                        Ministry Leader
-                      </Badge>
                       <h3 className="text-xl md:text-2xl font-bold mb-3">
-                        Demo Speaker
+                        More Speakers
                       </h3>
                       <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
-                        With a strong foundation in spiritual warfare and
-                        deliverance, this speaker equips believers to stand
-                        victorious in their faith.
+                        Additional speakers will be announced soon. Stay tuned
+                        for updates!
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
-                          <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Spiritual warfare expert</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
-                          <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Deliverance practitioner</span>
+                          <motion.div
+                            animate={{
+                              scale: [1, 1.3, 1],
+                            }}
+                            transition={{
+                              duration: 2,
+                              repeat: Infinity,
+                              ease: "easeInOut",
+                            }}
+                            className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"
+                          ></motion.div>
+                          <span>More announcements coming</span>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
                 </DrawerTrigger>
               </motion.div>
-              <DrawerContent className="max-h-[90vh]">
-                <div className="mx-auto w-full max-w-4xl">
-                  <DrawerHeader>
-                    <div className="flex flex-col md:flex-row gap-6 items-start">
-                      <div className="w-full md:w-64 h-64 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-zinc-200 to-zinc-300 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-zinc-500">
-                          Demo Image
-                        </span>
-                      </div>
-                      <div className="flex-1">
+              <DrawerContent className="max-h-[90vh] flex flex-col">
+                <div className="flex-1 overflow-y-auto">
+                  <div className="mx-auto w-full max-w-4xl">
+                    <DrawerHeader>
+                      <div className="w-full">
                         <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none mb-4 rounded-full">
-                          Ministry Leader
+                          Coming Soon
                         </Badge>
                         <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
-                          Demo Speaker
+                          More Speakers
                         </DrawerTitle>
                         <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                          With a strong foundation in spiritual warfare and
-                          deliverance, this speaker equips believers to stand
-                          victorious in their faith. Through practical teaching
-                          and powerful ministry, attendees learn to recognize
-                          and overcome spiritual opposition while walking in the
-                          authority given to them in Christ. This ministry has
-                          helped many break free from bondage and step into
-                          greater freedom.
+                          Additional speakers will be announced soon. Stay tuned
+                          for updates on our amazing lineup of speakers who will
+                          be joining us for this transformative event.
                         </DrawerDescription>
                       </div>
-                    </div>
-                  </DrawerHeader>
-                  <div className="px-4 pb-6">
-                    <div className="space-y-4 mt-6">
-                      <h4 className="text-xl font-semibold text-zinc-900">
-                        Areas of Expertise
-                      </h4>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Spiritual warfare expert
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Deliverance practitioner
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Authority in Christ
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-3 p-4 bg-zinc-50 rounded-xl">
-                          <CheckCircle2 className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
-                          <span className="text-base text-zinc-700">
-                            Freedom ministry
-                          </span>
+                    </DrawerHeader>
+                    <div className="px-4 pb-6">
+                      <div className="space-y-4 mt-6">
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="p-6 bg-gradient-to-br from-[#00AEA9]/5 to-[#00C4B8]/5 rounded-2xl border border-[#00AEA9]/10"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-[#00AEA9] rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-base text-zinc-700">
+                                Additional powerful voices in ministry will be
+                                joining us
+                              </p>
+                            </div>
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="p-6 bg-gradient-to-br from-[#00AEA9]/5 to-[#00C4B8]/5 rounded-2xl border border-[#00AEA9]/10"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-[#00AEA9] rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-base text-zinc-700">
+                                Each speaker brings unique revelation and
+                                anointing
+                              </p>
+                            </div>
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 }}
+                            className="p-6 bg-gradient-to-br from-[#00AEA9]/5 to-[#00C4B8]/5 rounded-2xl border border-[#00AEA9]/10"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-[#00AEA9] rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-base text-zinc-700">
+                                Expect powerful teaching, ministry, and
+                                activation
+                              </p>
+                            </div>
+                          </motion.div>
+                          <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.4 }}
+                            className="p-6 bg-gradient-to-br from-[#00AEA9]/5 to-[#00C4B8]/5 rounded-2xl border border-[#00AEA9]/10"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-[#00AEA9] rounded-full mt-2 flex-shrink-0"></div>
+                              <p className="text-base text-zinc-700">
+                                Announcements will be made via email and social
+                                media
+                              </p>
+                            </div>
+                          </motion.div>
                         </div>
                       </div>
                     </div>
@@ -1800,320 +1783,10 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Combined Schedule Section with Carousel - Funnel Step 5 */}
-      <section
-        id="schedule"
-        className="py-32 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden snap-start"
-      >
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div {...fadeInUp} className="text-center mb-20">
-            <Badge className="bg-[#00AEA9] text-white border-none px-6 py-2 mb-6 rounded-full">
-              Your Complete Journey
-            </Badge>
-            <h2 className="text-6xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-[#00AEA9] bg-clip-text text-transparent">
-                4 Days In The Glory{" "}
-                <span className="text-[#00AEA9] drop-shadow-[0_0_20px_rgba(0,174,169,0.8)]">
-                  2026
-                </span>
-              </span>
-            </h2>
-            <p className="text-2xl md:text-3xl text-zinc-300 max-w-4xl mx-auto leading-relaxed">
-              Each day builds upon the last, opening up revelatory realms of the
-              spirit leading to breakthrough, healing and miracles.
-            </p>
-          </motion.div>
-
-          <div className="max-w-6xl mx-auto">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full"
-            >
-              <CarouselContent>
-                {[
-                  {
-                    day: "Day 1",
-                    dayNumber: 1,
-                    title: "Day One",
-                    description:
-                      "Details coming soon. Join us for a powerful start to your transformation journey.",
-                    time: "Schedule TBD",
-                    image: "/hero_section_small_backdrop.jpg",
-                    badge: "Day One",
-                  },
-                  {
-                    day: "Day 2",
-                    dayNumber: 2,
-                    title: "Day Two",
-                    description:
-                      "Details coming soon. Experience continued breakthrough and activation.",
-                    time: "Schedule TBD",
-                    image: "/hero_section_small_backdrop.jpg",
-                    badge: "Day Two",
-                  },
-                  {
-                    day: "Day 3",
-                    dayNumber: 3,
-                    title: "Day Three",
-                    description:
-                      "Details coming soon. Step deeper into your calling and purpose.",
-                    time: "Schedule TBD",
-                    image: "/hero_section_small_backdrop.jpg",
-                    badge: "Day Three",
-                  },
-                  {
-                    day: "Day 4",
-                    dayNumber: 4,
-                    title: "Day Four",
-                    description:
-                      "Details coming soon. Complete your journey with final activation and commissioning.",
-                    time: "Schedule TBD",
-                    image: "/hero_section_small_backdrop.jpg",
-                    badge: "Day Four",
-                  },
-                ].map((dayData, index) => (
-                  <CarouselItem key={index}>
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <Card className="border-none shadow-2xl rounded-3xl bg-white/5 backdrop-blur-sm border border-white/10">
-                        <CardContent className="p-8 md:p-16">
-                          <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
-                            <div>
-                              <div className="flex items-center gap-4 mb-6">
-                                <div className="w-20 h-20 bg-[#00AEA9] rounded-2xl flex items-center justify-center">
-                                  <span className="text-4xl font-bold text-white">
-                                    {dayData.dayNumber}
-                                  </span>
-                                </div>
-                                <div>
-                                  <div className="text-[#00AEA9] text-lg mb-2">
-                                    {dayData.day}
-                                  </div>
-                                  <h3 className="text-3xl md:text-4xl text-white font-bold">
-                                    {dayData.title}
-                                  </h3>
-                                </div>
-                              </div>
-                              <div className="flex items-center gap-3 text-zinc-300 text-xl mb-8">
-                                <Clock className="h-6 w-6 text-[#00AEA9]" />
-                                <span>{dayData.time}</span>
-                              </div>
-                              <p className="text-xl md:text-2xl text-zinc-300 leading-relaxed">
-                                {dayData.description}
-                              </p>
-                            </div>
-
-                            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                              <ImageWithFallback
-                                src={dayData.image}
-                                alt={`${dayData.day} Experience`}
-                                className="w-full h-[600px] object-cover"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/70 to-transparent"></div>
-                              <div className="absolute bottom-0 left-0 right-0 p-8">
-                                <Badge className="bg-white/20 backdrop-blur-sm text-white border-none mb-3 rounded-full">
-                                  {dayData.badge}
-                                </Badge>
-                                <h4 className="text-2xl text-white font-bold mb-2">
-                                  {dayData.title}
-                                </h4>
-                                <p className="text-lg text-zinc-200">
-                                  {dayData.description}
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4 bg-white/10 hover:bg-white/20 text-white border-white/20" />
-              <CarouselNext className="right-4 bg-white/10 hover:bg-white/20 text-white border-white/20" />
-            </Carousel>
-          </div>
-
-          <motion.div {...fadeInUp} className="text-center mt-16">
-            <Button
-              size="lg"
-              onClick={() =>
-                window.open(
-                  "https://bridechurch.churchcenter.com/registrations/events/3225360",
-                  "_blank"
-                )
-              }
-              className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-7 text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
-            >
-              <span className="relative z-10 flex items-center">
-                Secure My Transformation Journey
-                <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Venue Gallery Section with Crossing Carousels */}
-      <section id="venue" className="py-20 bg-white overflow-hidden snap-start">
-        <div className="container mx-auto px-6">
-          <motion.div {...fadeInUp} className="text-center mb-12">
-            <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-4 rounded-full">
-              The Venue
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-zinc-900 to-zinc-700 bg-clip-text text-transparent">
-                Westin Galleria Houston
-              </span>
-            </h2>
-            <p className="text-lg text-zinc-600 max-w-2xl mx-auto mb-6">
-              A stunning Four Diamond-rated hotel in the heart of Houston
-            </p>
-            <div className="flex items-center justify-center gap-2 text-zinc-600">
-              <MapPin className="h-5 w-5 text-[#00AEA9]" />
-              <span className="text-base">
-                5060 W Alabama St, Houston, TX 77056
-              </span>
-            </div>
-          </motion.div>
-
-          <div className="max-w-7xl mx-auto">
-            {/* Crossing Carousels */}
-            <div className="mb-12 relative">
-              {/* First Carousel - Moving Left */}
-              <div className="overflow-hidden mb-4">
-                <div className="flex animate-scroll-left">
-                  {[
-                    "/galleria/159FB386-5AB9-49E8-B944-63D888731843_1_105_c.jpeg",
-                    "/galleria/4937B467-0900-4DE9-B295-AD89FA0BCAC7_1_105_c.jpeg",
-                    "/galleria/518D240C-10D1-4AD8-AAAE-CF51ABB05608_1_105_c.jpeg",
-                    "/galleria/6467DD8F-E346-45DF-9C6C-457F0B65BA90_1_105_c.jpeg",
-                    "/galleria/BF8A18D8-960E-4E49-8F70-7E3B2A5854BA_1_105_c.jpeg",
-                    "/galleria/C6440BE1-57E3-4D10-82B0-8B41B0C6BBFC_1_105_c.jpeg",
-                    "/galleria/F88AA4B0-3AF8-41F4-9E25-F4C3B119CE79_1_105_c.jpeg",
-                    "/galleria/FC255BE6-B19B-4A5C-BEB1-060F09331EEE_1_105_c.jpeg",
-                    "/galleria/159FB386-5AB9-49E8-B944-63D888731843_1_105_c.jpeg",
-                    "/galleria/4937B467-0900-4DE9-B295-AD89FA0BCAC7_1_105_c.jpeg",
-                    "/galleria/518D240C-10D1-4AD8-AAAE-CF51ABB05608_1_105_c.jpeg",
-                    "/galleria/6467DD8F-E346-45DF-9C6C-457F0B65BA90_1_105_c.jpeg",
-                  ].map((src, index) => (
-                    <div
-                      key={`left-${index}`}
-                      className="flex-shrink-0 w-80 h-64 mx-3 rounded-xl overflow-hidden shadow-lg"
-                    >
-                      <ImageWithFallback
-                        src={src}
-                        alt="Venue Gallery"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Second Carousel - Moving Right */}
-              <div className="overflow-hidden">
-                <div className="flex animate-scroll-right">
-                  {[
-                    "/galleria/FC255BE6-B19B-4A5C-BEB1-060F09331EEE_1_105_c.jpeg",
-                    "/galleria/F88AA4B0-3AF8-41F4-9E25-F4C3B119CE79_1_105_c.jpeg",
-                    "/galleria/C6440BE1-57E3-4D10-82B0-8B41B0C6BBFC_1_105_c.jpeg",
-                    "/galleria/BF8A18D8-960E-4E49-8F70-7E3B2A5854BA_1_105_c.jpeg",
-                    "/galleria/6467DD8F-E346-45DF-9C6C-457F0B65BA90_1_105_c.jpeg",
-                    "/galleria/518D240C-10D1-4AD8-AAAE-CF51ABB05608_1_105_c.jpeg",
-                    "/galleria/4937B467-0900-4DE9-B295-AD89FA0BCAC7_1_105_c.jpeg",
-                    "/galleria/159FB386-5AB9-49E8-B944-63D888731843_1_105_c.jpeg",
-                    "/galleria/FC255BE6-B19B-4A5C-BEB1-060F09331EEE_1_105_c.jpeg",
-                    "/galleria/F88AA4B0-3AF8-41F4-9E25-F4C3B119CE79_1_105_c.jpeg",
-                    "/galleria/C6440BE1-57E3-4D10-82B0-8B41B0C6BBFC_1_105_c.jpeg",
-                    "/galleria/BF8A18D8-960E-4E49-8F70-7E3B2A5854BA_1_105_c.jpeg",
-                  ].map((src, index) => (
-                    <div
-                      key={`right-${index}`}
-                      className="flex-shrink-0 w-80 h-64 mx-3 rounded-xl overflow-hidden shadow-lg"
-                    >
-                      <ImageWithFallback
-                        src={src}
-                        alt="Venue Gallery"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Google Maps */}
-            <motion.div {...fadeInUp} className="mb-8">
-              <Card className="border-none shadow-2xl rounded-2xl overflow-hidden">
-                <div className="relative w-full h-[400px] md:h-[500px]">
-                  <iframe
-                    src="https://www.google.com/maps?q=Westin+Galleria+Houston+5060+W+Alabama+St+Houston+TX+77056&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="absolute inset-0"
-                    title="Westin Galleria Houston Location"
-                  ></iframe>
-                </div>
-                <CardContent className="p-6 bg-zinc-50">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="h-6 w-6 text-[#00AEA9] flex-shrink-0 mt-1" />
-                    <div>
-                      <p className="font-semibold text-zinc-900 mb-1 text-lg">
-                        Westin Galleria Houston
-                      </p>
-                      <p className="text-zinc-600">
-                        5060 W Alabama St, Houston, TX 77056
-                      </p>
-                      <p className="text-sm text-zinc-500 mt-2">
-                        Four Diamond-rated hotel with direct access to The
-                        Galleria Mall
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Compact Description */}
-            <motion.div {...fadeInUp} className="text-center">
-              <p className="text-base text-zinc-700 leading-relaxed max-w-3xl mx-auto">
-                What began as a small, informal gathering has grown into a
-                life-changing annual encounter with God. Each year, attendance
-                has more than doubled, and momentum continues to build.
-                <span className="font-semibold text-[#00AEA9]">
-                  {" "}
-                  If you&apos;re hungry for more of God, longing for authentic
-                  community, and ready to step into your next level—this is your
-                  invitation.
-                </span>
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing & Registration Section - Funnel Step 8 */}
       <section
         id="pricing"
-        className="py-32 relative overflow-hidden snap-start"
+        className="py-16 sm:py-24 md:py-32 relative overflow-hidden snap-start"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900"></div>
         <div className="absolute inset-0 opacity-10">
@@ -2121,7 +1794,7 @@ export default function Home() {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div {...fadeInUp} className="text-center mb-16 text-white">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9] text-white border-none px-6 py-2 mb-6 rounded-full">
@@ -2206,8 +1879,11 @@ export default function Home() {
                         type: "spring",
                         stiffness: 200,
                       }}
-                      className="flex items-center justify-center gap-3 mb-3"
+                      className="flex items-center justify-center gap-3 mb-3 relative"
                     >
+                      <span className="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-2xl md:text-3xl font-bold text-red-500 line-through">
+                        $75
+                      </span>
                       <motion.div
                         animate={{ rotate: [0, 10, -10, 0] }}
                         transition={{
@@ -2237,7 +1913,10 @@ export default function Home() {
                     </motion.div>
 
                     <p className="text-xl text-zinc-600 mb-6 font-semibold">
-                      Per Adult Children free
+                      Per Adult <br />{" "}
+                      <span className="text-zinc-600 font-bold">
+                        Children free
+                      </span>
                     </p>
 
                     <motion.div
@@ -2246,9 +1925,7 @@ export default function Home() {
                       transition={{ type: "spring", stiffness: 400 }}
                     >
                       <span className="text-[#00AEA9] text-lg font-semibold">
-                        Early Bird:{" "}
-                        <span className="text-2xl font-bold">$397</span> (Ends
-                        March 1st, 2026)
+                        Early Early Bird: Ends Novemeber 23, 2025
                       </span>
                     </motion.div>
                   </div>
@@ -2259,7 +1936,8 @@ export default function Home() {
                       "Personal activation & prayer ministry",
                       "Conference materials & resources",
                       "Access to recorded sessions post-event",
-                      "Certificate of completion",
+                      "Complimentary Reception",
+                      "Payment plans available.",
                     ].map((item, index) => (
                       <motion.div
                         key={index}
@@ -2294,10 +1972,10 @@ export default function Home() {
                           "_blank"
                         )
                       }
-                      className="relative w-full bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] h-16 text-xl rounded-full mb-4 shadow-xl shadow-[#00AEA9]/25 font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
+                      className="relative w-full bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] h-12 sm:h-14 md:h-16 text-base sm:text-lg md:text-xl rounded-full mb-4 shadow-xl shadow-[#00AEA9]/25 font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
                     >
                       <span className="relative z-10 flex items-center justify-center">
-                        Register Now - $397
+                        Get 65% off registration now!
                         <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                       </span>
                       <motion.div
@@ -2316,7 +1994,7 @@ export default function Home() {
                   </motion.div>
 
                   <p className="text-center text-zinc-500 text-lg">
-                    *Meals and lodging not included. Payment plans available.
+                    *Hotel Booking Required At Checkout.
                   </p>
                 </CardContent>
               </Card>
@@ -2325,9 +2003,170 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Venue Gallery Section with Crossing Carousels */}
+      <section
+        id="venue"
+        className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
+          <motion.div {...fadeInUp} className="text-center mb-12">
+            <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-4 rounded-full">
+              The Venue
+            </Badge>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-zinc-900 to-zinc-700 bg-clip-text text-transparent">
+                Westin Galleria Houston
+              </span>
+            </h2>
+            <p className="text-lg text-zinc-600 max-w-2xl mx-auto mb-6">
+              A stunning Four Diamond-rated hotel in the heart of Houston
+            </p>
+            <div className="flex items-center justify-center gap-2 text-zinc-600">
+              <MapPin className="h-5 w-5 text-[#00AEA9]" />
+              <span className="text-base">
+                5060 W Alabama St, Houston, TX 77056
+              </span>
+            </div>
+          </motion.div>
+
+          <div className="max-w-7xl mx-auto">
+            {/* Crossing Carousels */}
+            <div className="mb-12 relative">
+              {/* First Carousel - Moving Left */}
+              <div className="overflow-hidden mb-4">
+                <div className="flex animate-scroll-left">
+                  {[
+                    "/galleria/Screenshot 2025-11-17 161930.png",
+                    "/galleria/Screenshot 2025-11-17 161936.png",
+                    "/galleria/Screenshot 2025-11-17 161951.png",
+                    "/galleria/Screenshot 2025-11-17 162000.png",
+                    "/galleria/Screenshot 2025-11-17 162035.png",
+                    "/galleria/Screenshot 2025-11-17 162042.png",
+                    "/galleria/Screenshot 2025-11-17 162050.png",
+                    "/galleria/Screenshot 2025-11-17 162106.png",
+                    "/galleria/Screenshot 2025-11-17 162120.png",
+                    "/galleria/Screenshot 2025-11-17 163617.png",
+                    "/galleria/Screenshot 2025-11-17 163638.png",
+                    "/galleria/Screenshot 2025-11-17 163648.png",
+                    "/galleria/Screenshot 2025-11-17 163702.png",
+                    "/galleria/Screenshot 2025-11-17 163715.png",
+                    "/galleria/Screenshot 2025-11-17 161930.png",
+                    "/galleria/Screenshot 2025-11-17 161936.png",
+                    "/galleria/Screenshot 2025-11-17 161951.png",
+                    "/galleria/Screenshot 2025-11-17 162000.png",
+                  ].map((src, index) => (
+                    <div
+                      key={`left-${index}`}
+                      className="flex-shrink-0 w-80 h-64 mx-3 rounded-xl overflow-hidden shadow-lg"
+                    >
+                      <ImageWithFallback
+                        src={src}
+                        alt="Venue Gallery"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Second Carousel - Moving Right */}
+              <div className="overflow-hidden">
+                <div className="flex animate-scroll-right">
+                  {[
+                    "/galleria/Screenshot 2025-11-17 163715.png",
+                    "/galleria/Screenshot 2025-11-17 163702.png",
+                    "/galleria/Screenshot 2025-11-17 163648.png",
+                    "/galleria/Screenshot 2025-11-17 163638.png",
+                    "/galleria/Screenshot 2025-11-17 163617.png",
+                    "/galleria/Screenshot 2025-11-17 162120.png",
+                    "/galleria/Screenshot 2025-11-17 162106.png",
+                    "/galleria/Screenshot 2025-11-17 162050.png",
+                    "/galleria/Screenshot 2025-11-17 162042.png",
+                    "/galleria/Screenshot 2025-11-17 162035.png",
+                    "/galleria/Screenshot 2025-11-17 162000.png",
+                    "/galleria/Screenshot 2025-11-17 161951.png",
+                    "/galleria/Screenshot 2025-11-17 161936.png",
+                    "/galleria/Screenshot 2025-11-17 161930.png",
+                    "/galleria/Screenshot 2025-11-17 163715.png",
+                    "/galleria/Screenshot 2025-11-17 163702.png",
+                    "/galleria/Screenshot 2025-11-17 163648.png",
+                    "/galleria/Screenshot 2025-11-17 163638.png",
+                  ].map((src, index) => (
+                    <div
+                      key={`right-${index}`}
+                      className="flex-shrink-0 w-80 h-64 mx-3 rounded-xl overflow-hidden shadow-lg"
+                    >
+                      <ImageWithFallback
+                        src={src}
+                        alt="Venue Gallery"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Google Maps */}
+            <motion.div {...fadeInUp} className="mb-8">
+              <Card className="border-none shadow-2xl rounded-2xl overflow-hidden">
+                <div className="relative w-full h-[400px] md:h-[500px]">
+                  <iframe
+                    src="https://www.google.com/maps?q=Westin+Galleria+Houston+5060+W+Alabama+St+Houston+TX+77056&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0"
+                    title="Westin Galleria Houston Location"
+                  ></iframe>
+                </div>
+                <CardContent className="p-6 bg-zinc-50">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="h-6 w-6 text-[#00AEA9] flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="font-semibold text-zinc-900 mb-1 text-lg">
+                        Westin Galleria Houston
+                      </p>
+                      <p className="text-zinc-600">
+                        5060 W Alabama St, Houston, TX 77056
+                      </p>
+                      <p className="text-sm text-zinc-500 mt-2">
+                        Four Diamond-rated hotel with direct access to The
+                        Galleria Mall
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Compact Description */}
+            <motion.div {...fadeInUp} className="text-center">
+              <p className="text-base text-zinc-700 leading-relaxed max-w-3xl mx-auto">
+                What began as a small, informal gathering has grown into a
+                life-changing annual encounter with God. Each year, attendance
+                has more than doubled, and momentum continues to build.
+                <span className="font-semibold text-[#00AEA9]">
+                  {" "}
+                  If you&apos;re hungry for more of God, longing for authentic
+                  community, and ready to step into your next level—this is your
+                  invitation.
+                </span>
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section id="faq" className="py-32 bg-zinc-50 snap-start">
-        <div className="container mx-auto px-6">
+      <section
+        id="faq"
+        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
+      >
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
               <Badge className="bg-[#00AEA9]/10 text-[#00AEA9] border-none px-6 py-2 mb-6 rounded-full">
@@ -2354,29 +2193,54 @@ export default function Home() {
             <Accordion type="single" collapsible className="space-y-4">
               {[
                 {
-                  question: "What is an Advance?",
+                  question: "I need help with Registration. Who do I contact?",
                   answer:
-                    "An Advance is an intensive, multi-day event designed for deep spiritual growth, ministry, and activation. Unlike a typical conference, you'll receive personal ministry time, breakthrough sessions, and practical equipping for your spiritual journey. It's a focused time to press into God and experience lasting transformation.",
+                    "Please visit support.bridemovement.com/help. We have over 45 articles on the most frequently asked questions. If you still need help, you can email us at advance@bridemovement.com and someone from our team will get back to you within 24 hours.",
                 },
                 {
-                  question: "Who should attend?",
+                  question: "When does the event start and end?",
                   answer:
-                    "This advance is for anyone hungry for breakthrough, healing, and deeper intimacy with God. Whether you're new to deliverance ministry or experienced in spiritual warfare, you'll receive powerful teaching and ministry tailored to your journey. We welcome believers from all backgrounds who are ready for transformation.",
+                    "The first session starts at 11 a.m. CST on Thursday. The last session is Saturday night. Your registration includes the hotel room for Saturday night if booked and the 10 a.m. Sunday morning service. Check-out is before service on Sunday morning. Check in will begin at 3pm CST.",
                 },
                 {
-                  question: "Are meals or lodging included?",
+                  question: "How do I book an early arrival?",
                   answer:
-                    "The registration fee covers all teaching sessions, ministry times, and conference materials. Meals and lodging are not included, allowing you flexibility to choose accommodations that fit your budget. We'll provide a list of recommended hotels near the venue with special group rates.",
+                    "There are limited spots at this moment for Early Arrival we recommend that you book your early arrival as soon as possible before spots sell out!",
                 },
                 {
-                  question: "What should I bring?",
+                  question: "What is the schedule for the Advance?",
                   answer:
-                    "Bring your Bible, a notebook for taking notes, and an open heart ready to receive. Dress comfortably as we'll have extended sessions. We also recommend bringing water and any personal items you need for comfort during ministry times. A detailed preparation guide will be sent after registration.",
+                    "We do not give out the conference schedule prior to the start of the conference. If you'd like to know what usually takes place at our conference, please check out the following testimony services from prior Bride Tribe Advances.",
                 },
                 {
-                  question: "What if I can't attend all four days?",
+                  question: "How do I update my reservations for 2025 Advance?",
                   answer:
-                    "We strongly encourage attending all four days as each session builds upon the previous one for maximum breakthrough. However, we understand life happens. Recorded sessions will be available to registrants, so you won't miss any teaching if you need to step away. Contact us if you have specific schedule concerns.",
+                    "Please contact advance@bridemovement.com for any registration updates. Please keep in mind that once your booking order is placed a $15 administration fee will be charged. We can not guarantee adding additional attendees due to room capacity.",
+                },
+                {
+                  question: "Will my registration include meals?",
+                  answer:
+                    "In an effort to provide attendees with the ability to plan meals according to their own dietary needs, budget, and convenience and due to the growing size of the event we are NOT coordinating lunch or dinner on site. There are many incredible options within walking distance from the event location!",
+                },
+                {
+                  question: "Do you have DayPasses Available?",
+                  answer:
+                    "We currently are sold out of Daypasses. You are welcomed to join our waitlist and if anyone cancels their reservation for Day Passes we will reach out to you via email.",
+                },
+                {
+                  question: "Will the Bride Tribe Advance be Live Streamed?",
+                  answer:
+                    "Yes! Our Annual Bride Tribe Advance will be live-streamed. Live Stream Passes are now on SALE!",
+                },
+                {
+                  question: "What are parking cost associated with my stay?",
+                  answer:
+                    "The Westin Oaks at Galleria Houston has complementary self-parking during your stay!",
+                },
+                {
+                  question: "What time is Hotel Check in?",
+                  answer:
+                    "Hotel check-in for the conference will begin at 3:00 PM CST and check out is at 12 PM CST. Conference registration will open at 8:30 AM on Thursday morning.",
                 },
               ].map((item, index) => (
                 <AccordionItem
@@ -2398,8 +2262,8 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-16 sm:py-20 md:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="max-w-5xl mx-auto text-center">
             <motion.h2
               {...fadeInUp}
@@ -2423,7 +2287,7 @@ export default function Home() {
                     "_blank"
                   )
                 }
-                className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-12 py-8 text-2xl h-auto shadow-2xl shadow-[#00AEA9]/30 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
+                className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-8 md:px-12 py-4 sm:py-6 md:py-8 text-base sm:text-lg md:text-2xl h-auto shadow-2xl shadow-[#00AEA9]/30 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300 w-full sm:w-auto"
               >
                 <span className="relative z-10 flex items-center">
                   Secure Your Spot Today
@@ -2439,74 +2303,15 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-zinc-900 text-white py-16 snap-none">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Logo & About */}
-            <div className="md:col-span-2">
+            <div>
               <h3 className="text-3xl font-bold mb-4">Bride Tribe</h3>
               <p className="text-zinc-400 mb-6 max-w-md text-lg">
                 Equipping the Bride of Christ for breakthrough, healing, and
                 spiritual warfare through biblical teaching and powerful
                 ministry.
               </p>
-              <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-zinc-800 hover:bg-[#00AEA9] rounded-2xl flex items-center justify-center transition-colors"
-                >
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-zinc-800 hover:bg-[#00AEA9] rounded-2xl flex items-center justify-center transition-colors"
-                >
-                  <Instagram className="h-6 w-6" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-zinc-800 hover:bg-[#00AEA9] rounded-2xl flex items-center justify-center transition-colors"
-                >
-                  <Youtube className="h-6 w-6" />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-xl font-bold mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-zinc-400 hover:text-[#00AEA9] transition-colors text-lg"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-zinc-400 hover:text-[#00AEA9] transition-colors text-lg"
-                  >
-                    Events
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-zinc-400 hover:text-[#00AEA9] transition-colors text-lg"
-                  >
-                    Resources
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-zinc-400 hover:text-[#00AEA9] transition-colors text-lg"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
             </div>
 
             {/* Contact */}
