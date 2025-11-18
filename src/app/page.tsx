@@ -170,7 +170,7 @@ export default function Home() {
                 video.play();
               }}
             >
-              <source src="/fogbackground.mp4" type="video/mp4" />
+              <source src="/fogbackgrounds.mp4" type="video/mp4" />
             </video>
           </motion.div>
 
