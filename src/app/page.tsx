@@ -143,21 +143,35 @@ export default function Home() {
       {/* Hero Section - Innovative Modern Design */}
       <section
         id="hero"
-        className="relative min-h-screen flex items-center overflow-hidden snap-start bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950"
+        className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950"
         style={{ minHeight: "100dvh" }}
       >
-        {/* Dynamic Background with Parallax Layers */}
+        {/* Dynamic Background with Video */}
         <div className="absolute inset-0 z-0">
-          {/* Base Image Layer - Background */}
+          {/* Video Background Layer */}
           <motion.div
             className="absolute inset-0"
             style={{ willChange: "transform", zIndex: 1 }}
           >
-            <ImageWithFallback
-              src="/hero_section_small_backdrop.jpg"
-              alt="Worship Conference"
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               className="w-full h-full object-cover object-center"
-            />
+              onLoadedData={(e) => {
+                const video = e.currentTarget;
+                video.currentTime = 0;
+              }}
+              onEnded={(e) => {
+                const video = e.currentTarget;
+                video.currentTime = 0;
+                video.play();
+              }}
+            >
+              <source src="/fogbackground.mp4" type="video/mp4" />
+            </video>
           </motion.div>
 
           {/* Animated Mesh Gradient Overlay */}
@@ -190,6 +204,84 @@ export default function Home() {
               backgroundSize: "50px 50px",
             }}
           />
+
+          {/* Animated Fog Layers */}
+          <div
+            className="absolute inset-0"
+            style={{ zIndex: 4, pointerEvents: "none" }}
+          >
+            {/* Fog Layer 1 - Slow drift */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%)",
+                backgroundSize: "200% 200%",
+              }}
+              animate={{
+                backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+              }}
+              transition={{
+                duration: 20,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+
+            {/* Fog Layer 2 - Medium drift */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 30% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%)",
+                backgroundSize: "150% 150%",
+              }}
+              animate={{
+                backgroundPosition: ["100% 0%", "0% 100%", "100% 0%"],
+              }}
+              transition={{
+                duration: 15,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+
+            {/* Fog Layer 3 - Fast drift */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.06) 0%, transparent 50%)",
+                backgroundSize: "180% 180%",
+              }}
+              animate={{
+                backgroundPosition: ["0% 100%", "100% 0%", "0% 100%"],
+              }}
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+
+            {/* Fog Layer 4 - Vertical drift */}
+            <motion.div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 55%)",
+                backgroundSize: "160% 160%",
+              }}
+              animate={{
+                backgroundPosition: ["50% 0%", "50% 100%", "50% 0%"],
+              }}
+              transition={{
+                duration: 18,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+          </div>
         </div>
 
         {/* Main Content - Full Width Text */}
@@ -420,7 +512,7 @@ export default function Home() {
                 });
               }
             }}
-            className="group flex flex-col items-center gap-1 sm:gap-2"
+            className="hidden md:flex group flex-col items-center gap-1 sm:gap-2"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -448,10 +540,7 @@ export default function Home() {
       </section>
 
       {/* Why Attend Section - Funnel Step 1 */}
-      <section
-        id="why-attend"
-        className="py-16 sm:py-24 md:py-32 bg-white snap-start"
-      >
+      <section id="why-attend" className="py-16 sm:py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
@@ -464,7 +553,7 @@ export default function Home() {
               className="text-5xl md:text-6xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-zinc-900 to-zinc-700 bg-clip-text text-transparent">
-                Experience The Bride Tribe
+                Experience <br></br> The Bride Tribe
               </span>
             </motion.h2>
             <motion.p
@@ -551,14 +640,14 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative -my-20 md:-my-16 z-40"
+        className="relative -my-8 sm:-my-12 md:-my-16 z-40"
       >
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative bg-gradient-to-r from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] rounded-2xl p-4 md:p-8 shadow-2xl border-4 border-white overflow-hidden"
+              className="relative bg-gradient-to-r from-[#00AEA9] via-[#00C4B8] to-[#00AEA9] rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl border-4 border-white overflow-hidden"
             >
               {/* Animated background gradient */}
               <motion.div
@@ -577,7 +666,7 @@ export default function Home() {
               />
 
               {/* Content */}
-              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5 md:gap-6">
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                     Lock In Early Bird Pricing
@@ -593,7 +682,7 @@ export default function Home() {
                       "_blank"
                     )
                   }
-                  className="relative bg-white text-[#00AEA9] hover:bg-zinc-50 px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
+                  className="relative bg-white text-[#00AEA9] hover:bg-zinc-50 px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-sm md:text-base font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
                 >
                   Reserve Your Spot Now!
                   <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -611,7 +700,7 @@ export default function Home() {
       {/* Event Overview Section - Funnel Step 2 */}
       <section
         id="experience"
-        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
+        className="pt-24 pb-16 sm:pt-24 sm:pb-24 md:py-32 bg-zinc-50"
       >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
@@ -649,7 +738,6 @@ export default function Home() {
                         }}
                       />
                     </span>
-                    .
                   </motion.span>
                 )}
                 {textPhase === "retreat" && (
@@ -676,7 +764,6 @@ export default function Home() {
                         }}
                       />
                     </span>
-                    .
                   </motion.span>
                 )}
                 {textPhase === "advance" && (
@@ -751,7 +838,6 @@ export default function Home() {
                         Advance
                       </motion.span>
                     </span>
-                    .
                   </motion.span>
                 )}
               </AnimatePresence>
@@ -821,14 +907,14 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative -my-16 z-40"
+        className="relative -my-8 sm:-my-12 md:-my-16 z-40"
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative bg-white rounded-2xl p-6 md:p-8 shadow-2xl border-4 border-zinc-100 overflow-hidden"
+              className="relative bg-white rounded-2xl p-6 sm:p-8 md:p-10 shadow-2xl border-4 border-zinc-100 overflow-hidden"
             >
               {/* Animated gradient border effect */}
               <motion.div
@@ -850,7 +936,7 @@ export default function Home() {
               <div className="absolute inset-[2px] bg-white rounded-2xl"></div>
 
               {/* Content */}
-              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+              <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-5 md:gap-6">
                 <div className="flex items-center gap-4 flex-1">
                   <div className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-br from-[#00AEA9] to-[#00C4B8] rounded-xl flex items-center justify-center flex-shrink-0">
                     <Sparkles className="h-6 w-6 md:h-7 md:w-7 text-white" />
@@ -871,7 +957,7 @@ export default function Home() {
                       "_blank"
                     )
                   }
-                  className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 md:px-8 py-3 md:py-4 text-sm md:text-base font-bold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
+                  className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-sm md:text-base font-bold text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0 group"
                 >
                   Register Today
                   <ChevronRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -885,7 +971,7 @@ export default function Home() {
       {/* Transformation Gallery Section - Funnel Step 3 */}
       <section
         id="gallery"
-        className="py-16 sm:py-24 md:py-32 bg-white snap-start"
+        className="pt-24 pb-16 sm:pt-24 sm:pb-24 md:py-32 bg-white"
       >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
@@ -995,7 +1081,7 @@ export default function Home() {
       {/* Combined Schedule Section with Carousel - Funnel Step 5 */}
       <section
         id="schedule"
-        className="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden snap-start"
+        className="py-16 sm:py-24 md:py-32 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white relative overflow-hidden"
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#00AEA9] rounded-full blur-3xl"></div>
@@ -1142,10 +1228,7 @@ export default function Home() {
       </section>
 
       {/* Meet the Hosts Section - Funnel Step 4 */}
-      <section
-        id="hosts"
-        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
-      >
+      <section id="hosts" className="py-16 sm:py-24 md:py-32 bg-zinc-50">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
@@ -1298,20 +1381,24 @@ export default function Home() {
                         Christian Duval
                       </h3>
                       <p className="text-sm md:text-base text-zinc-600 mb-4 leading-relaxed">
-                        Christian Duval, brings a powerful prophetic anointing
-                        and a heart for inner healing. Together with Dan, she
-                        co-leads Bride Tribe, ministering to thousands with
-                        breakthrough, activation, and the restoration of
-                        God&apos;s people.
+                        Christian Duval is the Executive Pastor of Bride
+                        Ministries Church. She oversees daily operations,
+                        providing leadership, strategic direction, and pastoral
+                        care to ensure every ministry functions with unity and
+                        purpose.
                       </p>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
                           <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Prophetic minister</span>
+                          <span>Executive Pastor</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
                           <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
-                          <span>Inner healing specialist</span>
+                          <span>Leadership & Strategic Direction</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-sm md:text-base text-zinc-700">
+                          <div className="w-1.5 h-1.5 bg-[#00AEA9] rounded-full"></div>
+                          <span>Empowering Leaders</span>
                         </div>
                       </div>
                     </CardContent>
@@ -1334,25 +1421,61 @@ export default function Home() {
                           <DrawerTitle className="text-3xl md:text-4xl font-bold mb-4">
                             Christian Duval
                           </DrawerTitle>
-                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed">
-                            Christian Duval, is a powerful voice in prophetic
-                            ministry and inner healing. Together with Dan, she
-                            co-leads Bride Tribe, bringing decades of experience
-                            in equipping believers for breakthrough and
-                            transformation. Christian carries a unique anointing
-                            for prophetic activation, helping people discover
-                            and step into their spiritual gifts and divine
-                            calling. Her ministry focuses on inner healing,
-                            deliverance, and the restoration of God&apos;s
-                            people. With a heart for seeing believers fully
-                            activated in their purpose, Christian combines
-                            practical teaching with powerful prophetic ministry,
-                            creating an atmosphere where breakthrough and
-                            healing flow freely. Her partnership with Dan in
-                            ministry has impacted countless lives, bringing
-                            clarity, freedom, and activation to the Body of
-                            Christ.
+                          <DrawerDescription className="text-lg text-zinc-600 leading-relaxed mb-6">
+                            Christian Duval is the Executive Pastor of Bride
+                            Ministries Church. She oversees the daily operations
+                            of the church, providing leadership, strategic
+                            direction, and pastoral care to ensure that every
+                            ministry functions with unity and purpose. Christian
+                            carries a deep passion for helping individuals
+                            encounter the transforming power of Jesus and
+                            empowering leaders to walk in their God-given
+                            callings. Her leadership reflects integrity, faith,
+                            and a genuine love for the Body of Christ.
                           </DrawerDescription>
+                          <div className="space-y-3 mt-4">
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Executive Pastor of Bride Ministries Church
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Oversees daily operations with leadership and
+                                strategic direction
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Provides pastoral care ensuring ministries
+                                function with unity and purpose
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Deep passion for helping individuals encounter
+                                the transforming power of Jesus
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Empowers leaders to walk in their God-given
+                                callings
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-4 text-base md:text-lg text-zinc-700">
+                              <CheckCircle2 className="h-5 w-5 md:h-6 md:w-6 text-[#00AEA9] flex-shrink-0 mt-0.5" />
+                              <span>
+                                Leadership reflects integrity, faith, and
+                                genuine love for the Body of Christ
+                              </span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </DrawerHeader>
@@ -1798,7 +1921,7 @@ export default function Home() {
       {/* Pricing & Registration Section - Funnel Step 8 */}
       <section
         id="pricing"
-        className="py-16 sm:py-24 md:py-32 relative overflow-hidden snap-start"
+        className="py-16 sm:py-24 md:py-32 relative overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900"></div>
         <div className="absolute inset-0 opacity-10">
@@ -1892,7 +2015,7 @@ export default function Home() {
                       }}
                       className="flex items-center justify-center gap-3 mb-3 relative"
                     >
-                      <span className="absolute -top-4 -right-2 md:-top-6 md:-right-6 text-2xl md:text-3xl font-bold text-red-500 line-through">
+                      <span className="absolute -top-2 -right-5 md:-top-3 md:-right-1 text-2xl md:text-3xl font-bold text-red-500 line-through">
                         $75
                       </span>
                       <motion.div
@@ -2016,7 +2139,7 @@ export default function Home() {
       {/* Venue Gallery Section with Crossing Carousels */}
       <section
         id="venue"
-        className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden snap-start"
+        className="py-16 sm:py-20 md:py-24 bg-white overflow-hidden"
       >
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-12">
@@ -2157,10 +2280,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section
-        id="faq"
-        className="py-16 sm:py-24 md:py-32 bg-zinc-50 snap-start"
-      >
+      <section id="faq" className="py-16 sm:py-24 md:py-32 bg-zinc-50">
         <div className="container mx-auto px-4 sm:px-6">
           <motion.div {...fadeInUp} className="text-center mb-20">
             <motion.div {...fadeIn}>
@@ -2291,7 +2411,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-zinc-900 text-white py-16 snap-none">
+      <footer className="bg-zinc-900 text-white py-16">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Mission moved below */}

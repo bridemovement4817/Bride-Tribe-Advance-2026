@@ -170,11 +170,6 @@ html {
   font-size: var(--font-size);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-}
-
-body {
-  scroll-snap-type: y proximity;
 }
 
 @keyframes accordion-down {
