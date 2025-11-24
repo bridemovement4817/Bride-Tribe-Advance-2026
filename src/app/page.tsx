@@ -2001,7 +2001,7 @@ export default function Home() {
                       }}
                     >
                       <Badge className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 border-none mb-6 text-white px-6 py-2 rounded-full text-base shadow-lg">
-                        🔥Early Early Bird Special
+                        🔥Early Bird Special
                       </Badge>
                     </motion.div>
 
@@ -2042,26 +2042,16 @@ export default function Home() {
                           backgroundSize: "200% auto",
                         }}
                       >
-                        25
+                        50
                       </motion.span>
                     </motion.div>
 
                     <p className="text-xl text-zinc-600 mb-6 font-semibold">
                       Per Adult <br />{" "}
                       <span className="text-zinc-600 font-bold">
-                        Children free
+                        $25 per child
                       </span>
                     </p>
-
-                    <motion.div
-                      className="inline-block bg-gradient-to-r from-[#00AEA9]/10 to-[#00C4B8]/10 px-6 py-3 rounded-2xl border border-[#00AEA9]/20"
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                    >
-                      <span className="text-[#00AEA9] text-lg font-semibold">
-                        Early Early Bird: Ends November 23, 2025
-                      </span>
-                    </motion.div>
                   </div>
 
                   <div className="space-y-5 mb-10">
