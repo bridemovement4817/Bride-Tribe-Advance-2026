@@ -2318,7 +2318,7 @@ export default function Home() {
                     "We will share the schedule of the Advance closer to the event date when the details are finalized.",
                 },
                 {
-                  question: "How do I update my reservations for 2025 Advance?",
+                  question: "How do I update my reservations for 2026 Advance?",
                   answer:
                     "Please contact advance@bridemovement.com for any registration updates. Please keep in mind that once your booking order is placed a $15 administration fee will be charged. We can not guarantee adding additional attendees due to room capacity.",
                 },
