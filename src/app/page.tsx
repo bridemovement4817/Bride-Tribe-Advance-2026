@@ -1218,7 +1218,7 @@ export default function Home() {
               className="relative bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-7 text-base sm:text-lg md:text-xl h-auto shadow-xl shadow-[#00AEA9]/25 rounded-full font-semibold text-white border-0 overflow-hidden group transition-all duration-300 w-full sm:w-auto"
             >
               <span className="relative z-10 flex items-center">
-                Get 65% Off Registration Now!
+                Get 33% Off Registration Now!
                 <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
@@ -2098,7 +2098,7 @@ export default function Home() {
                       className="relative w-full bg-gradient-to-r from-[#00AEA9] to-[#00C4B8] hover:from-[#00C4B8] hover:to-[#00AEA9] h-12 sm:h-14 md:h-16 text-base sm:text-lg md:text-xl rounded-full mb-4 shadow-xl shadow-[#00AEA9]/25 font-semibold text-white border-0 overflow-hidden group transition-all duration-300"
                     >
                       <span className="relative z-10 flex items-center justify-center">
-                        Get 65% off registration now!
+                        Get 33% off registration now!
                         <ChevronRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
                       </span>
                       <motion.div
