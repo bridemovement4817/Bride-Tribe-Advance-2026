@@ -2300,7 +2300,7 @@ export default function Home() {
                 {
                   question: "I need help with registration. Who do I contact?",
                   answer:
-                    "Please visit support.bridemovement.com, We have over 45 articles on the most frequently asked questions. If you still need help, you can email us at advance@bridemovement.com and someone from our team will get back to you within 24 hours.",
+                    "Please visit support.bridemovement.com, We have over 45 articles on the most frequently asked questions. If you still need help, you can email us at events@bridemovement.com and someone from our team will get back to you within 24 hours.",
                 },
                 {
                   question: "When does the event start and end?",
@@ -2310,7 +2310,7 @@ export default function Home() {
                 {
                   question: "How do I book an early arrival?",
                   answer:
-                    "You can book an early arrival room for Wednesday, November 18 during the registration process or email us at advance@bridemovement.com ",
+                    "You can book an early arrival room for Wednesday, November 18 during the registration process or email us at events@bridemovement.com ",
                 },
                 {
                   question: "What is the schedule for the Advance?",
@@ -2320,7 +2320,7 @@ export default function Home() {
                 {
                   question: "How do I update my reservations for 2026 Advance?",
                   answer:
-                    "Please contact advance@bridemovement.com for any registration updates. Please keep in mind that once your booking order is placed a $15 administration fee will be charged. We can not guarantee adding additional attendees due to room capacity.",
+                    "Please contact events@bridemovement.com for any registration updates. Please keep in mind that once your booking order is placed a $15 administration fee will be charged. We can not guarantee adding additional attendees due to room capacity.",
                 },
                 {
                   question: "Will the Bride Tribe Advance be Live Streamed?",
@@ -2340,7 +2340,7 @@ export default function Home() {
                 {
                   question: "Do you offer payment plans?",
                   answer:
-                    "Yes. If you need to set up a payment plan, you can do so by contacting the registration team at advance@bridemovement.com",
+                    "Yes. If you need to set up a payment plan, you can do so by contacting the registration team at events@bridemovement.com",
                 },
               ].map((item, index) => (
                 <AccordionItem
@@ -2422,10 +2422,10 @@ export default function Home() {
                 <li className="flex items-center gap-2 text-zinc-400 text-lg">
                   <Mail className="h-5 w-5 text-[#00AEA9] flex-shrink-0" />
                   <a
-                    href="mailto:advance@bridemovement.com"
+                    href="mailto:events@bridemovement.com"
                     className="hover:text-[#00AEA9] transition-colors"
                   >
-                    advance@bridemovement.com
+                    events@bridemovement.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2 text-zinc-400 text-lg">
